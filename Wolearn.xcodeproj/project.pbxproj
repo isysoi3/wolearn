@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		977BA88CCCC6BD9D19D9839B /* Pods_Wolearn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70182ED8D95FF5034882E312 /* Pods_Wolearn.framework */; };
 		D3A2E21E23FC48F900CC27D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A2E21D23FC48F900CC27D0 /* AppDelegate.swift */; };
 		D3A2E22023FC48F900CC27D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A2E21F23FC48F900CC27D0 /* SceneDelegate.swift */; };
 		D3A2E22223FC48F900CC27D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A2E22123FC48F900CC27D0 /* ContentView.swift */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B072E0F60E6AE59F7963583 /* Pods-Wolearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wolearn.debug.xcconfig"; path = "Target Support Files/Pods-Wolearn/Pods-Wolearn.debug.xcconfig"; sourceTree = "<group>"; };
+		70182ED8D95FF5034882E312 /* Pods_Wolearn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wolearn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A2E21A23FC48F900CC27D0 /* Wolearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wolearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A2E21D23FC48F900CC27D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3A2E21F23FC48F900CC27D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		D3A2E23B23FC48FB00CC27D0 /* WolearnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WolearnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A2E23F23FC48FB00CC27D0 /* WolearnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolearnUITests.swift; sourceTree = "<group>"; };
 		D3A2E24123FC48FB00CC27D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E134F3ABF3C10E456794665D /* Pods-Wolearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wolearn.release.xcconfig"; path = "Target Support Files/Pods-Wolearn/Pods-Wolearn.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				977BA88CCCC6BD9D19D9839B /* Pods_Wolearn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9FD0F95AC01E84A22AF25F76 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B072E0F60E6AE59F7963583 /* Pods-Wolearn.debug.xcconfig */,
+				E134F3ABF3C10E456794665D /* Pods-Wolearn.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D3A2E21123FC48F900CC27D0 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +97,8 @@
 				D3A2E23323FC48FB00CC27D0 /* WolearnTests */,
 				D3A2E23E23FC48FB00CC27D0 /* WolearnUITests */,
 				D3A2E21B23FC48F900CC27D0 /* Products */,
+				9FD0F95AC01E84A22AF25F76 /* Pods */,
+				F0F46C1EF270AA1DC2D5E63A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +152,14 @@
 			path = WolearnUITests;
 			sourceTree = "<group>";
 		};
+		F0F46C1EF270AA1DC2D5E63A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70182ED8D95FF5034882E312 /* Pods_Wolearn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3A2E24423FC48FB00CC27D0 /* Build configuration list for PBXNativeTarget "Wolearn" */;
 			buildPhases = (
+				03BC80856655CCD12C61B370 /* [CP] Check Pods Manifest.lock */,
 				D3A2E21623FC48F900CC27D0 /* Sources */,
 				D3A2E21723FC48F900CC27D0 /* Frameworks */,
 				D3A2E21823FC48F900CC27D0 /* Resources */,
+				67D93C25FEC3248084660A2A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +287,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03BC80856655CCD12C61B370 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wolearn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67D93C25FEC3248084660A2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wolearn/Pods-Wolearn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wolearn/Pods-Wolearn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wolearn/Pods-Wolearn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D3A2E21623FC48F900CC27D0 /* Sources */ = {
@@ -432,6 +500,7 @@
 		};
 		D3A2E24523FC48FB00CC27D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B072E0F60E6AE59F7963583 /* Pods-Wolearn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +508,7 @@
 				DEVELOPMENT_TEAM = K3EBJ8K5KL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Wolearn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,12 +516,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = by.isysoi.Wolearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D3A2E24623FC48FB00CC27D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E134F3ABF3C10E456794665D /* Pods-Wolearn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -459,6 +530,7 @@
 				DEVELOPMENT_TEAM = K3EBJ8K5KL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Wolearn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,7 +538,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = by.isysoi.Wolearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
