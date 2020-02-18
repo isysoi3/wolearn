@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D3A2E21E23FC48F900CC27D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A2E21D23FC48F900CC27D0 /* AppDelegate.swift */; };
+		D3A2E22023FC48F900CC27D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A2E21F23FC48F900CC27D0 /* SceneDelegate.swift */; };
+		D3A2E22223FC48F900CC27D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A2E22123FC48F900CC27D0 /* ContentView.swift */; };
+		D3A2E22423FC48FA00CC27D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A2E22323FC48FA00CC27D0 /* Assets.xcassets */; };
+		D3A2E22723FC48FA00CC27D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A2E22623FC48FA00CC27D0 /* Preview Assets.xcassets */; };
+		D3A2E22A23FC48FA00CC27D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A2E22823FC48FA00CC27D0 /* LaunchScreen.storyboard */; };
+		D3A2E23523FC48FB00CC27D0 /* WolearnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A2E23423FC48FB00CC27D0 /* WolearnTests.swift */; };
+		D3A2E24023FC48FB00CC27D0 /* WolearnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A2E23F23FC48FB00CC27D0 /* WolearnUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3A2E23123FC48FB00CC27D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3A2E21223FC48F900CC27D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3A2E21923FC48F900CC27D0;
+			remoteInfo = Wolearn;
+		};
+		D3A2E23C23FC48FB00CC27D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3A2E21223FC48F900CC27D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3A2E21923FC48F900CC27D0;
+			remoteInfo = Wolearn;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D3A2E21A23FC48F900CC27D0 /* Wolearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wolearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A2E21D23FC48F900CC27D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D3A2E21F23FC48F900CC27D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D3A2E22123FC48F900CC27D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D3A2E22323FC48FA00CC27D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3A2E22623FC48FA00CC27D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D3A2E22923FC48FA00CC27D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3A2E22B23FC48FA00CC27D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A2E23023FC48FB00CC27D0 /* WolearnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WolearnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A2E23423FC48FB00CC27D0 /* WolearnTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolearnTests.swift; sourceTree = "<group>"; };
+		D3A2E23623FC48FB00CC27D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A2E23B23FC48FB00CC27D0 /* WolearnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WolearnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A2E23F23FC48FB00CC27D0 /* WolearnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolearnUITests.swift; sourceTree = "<group>"; };
+		D3A2E24123FC48FB00CC27D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3A2E21723FC48F900CC27D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A2E22D23FC48FB00CC27D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A2E23823FC48FB00CC27D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D3A2E21123FC48F900CC27D0 = {
+			isa = PBXGroup;
+			children = (
+				D3A2E21C23FC48F900CC27D0 /* Wolearn */,
+				D3A2E23323FC48FB00CC27D0 /* WolearnTests */,
+				D3A2E23E23FC48FB00CC27D0 /* WolearnUITests */,
+				D3A2E21B23FC48F900CC27D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D3A2E21B23FC48F900CC27D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3A2E21A23FC48F900CC27D0 /* Wolearn.app */,
+				D3A2E23023FC48FB00CC27D0 /* WolearnTests.xctest */,
+				D3A2E23B23FC48FB00CC27D0 /* WolearnUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3A2E21C23FC48F900CC27D0 /* Wolearn */ = {
+			isa = PBXGroup;
+			children = (
+				D3A2E21D23FC48F900CC27D0 /* AppDelegate.swift */,
+				D3A2E21F23FC48F900CC27D0 /* SceneDelegate.swift */,
+				D3A2E22123FC48F900CC27D0 /* ContentView.swift */,
+				D3A2E22323FC48FA00CC27D0 /* Assets.xcassets */,
+				D3A2E22823FC48FA00CC27D0 /* LaunchScreen.storyboard */,
+				D3A2E22B23FC48FA00CC27D0 /* Info.plist */,
+				D3A2E22523FC48FA00CC27D0 /* Preview Content */,
+			);
+			path = Wolearn;
+			sourceTree = "<group>";
+		};
+		D3A2E22523FC48FA00CC27D0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D3A2E22623FC48FA00CC27D0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D3A2E23323FC48FB00CC27D0 /* WolearnTests */ = {
+			isa = PBXGroup;
+			children = (
+				D3A2E23423FC48FB00CC27D0 /* WolearnTests.swift */,
+				D3A2E23623FC48FB00CC27D0 /* Info.plist */,
+			);
+			path = WolearnTests;
+			sourceTree = "<group>";
+		};
+		D3A2E23E23FC48FB00CC27D0 /* WolearnUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D3A2E23F23FC48FB00CC27D0 /* WolearnUITests.swift */,
+				D3A2E24123FC48FB00CC27D0 /* Info.plist */,
+			);
+			path = WolearnUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3A2E21923FC48F900CC27D0 /* Wolearn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3A2E24423FC48FB00CC27D0 /* Build configuration list for PBXNativeTarget "Wolearn" */;
+			buildPhases = (
+				D3A2E21623FC48F900CC27D0 /* Sources */,
+				D3A2E21723FC48F900CC27D0 /* Frameworks */,
+				D3A2E21823FC48F900CC27D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wolearn;
+			productName = Wolearn;
+			productReference = D3A2E21A23FC48F900CC27D0 /* Wolearn.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D3A2E22F23FC48FB00CC27D0 /* WolearnTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3A2E24723FC48FB00CC27D0 /* Build configuration list for PBXNativeTarget "WolearnTests" */;
+			buildPhases = (
+				D3A2E22C23FC48FB00CC27D0 /* Sources */,
+				D3A2E22D23FC48FB00CC27D0 /* Frameworks */,
+				D3A2E22E23FC48FB00CC27D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3A2E23223FC48FB00CC27D0 /* PBXTargetDependency */,
+			);
+			name = WolearnTests;
+			productName = WolearnTests;
+			productReference = D3A2E23023FC48FB00CC27D0 /* WolearnTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D3A2E23A23FC48FB00CC27D0 /* WolearnUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3A2E24A23FC48FB00CC27D0 /* Build configuration list for PBXNativeTarget "WolearnUITests" */;
+			buildPhases = (
+				D3A2E23723FC48FB00CC27D0 /* Sources */,
+				D3A2E23823FC48FB00CC27D0 /* Frameworks */,
+				D3A2E23923FC48FB00CC27D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3A2E23D23FC48FB00CC27D0 /* PBXTargetDependency */,
+			);
+			name = WolearnUITests;
+			productName = WolearnUITests;
+			productReference = D3A2E23B23FC48FB00CC27D0 /* WolearnUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3A2E21223FC48F900CC27D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Ilya Sysoi";
+				TargetAttributes = {
+					D3A2E21923FC48F900CC27D0 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					D3A2E22F23FC48FB00CC27D0 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = D3A2E21923FC48F900CC27D0;
+					};
+					D3A2E23A23FC48FB00CC27D0 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = D3A2E21923FC48F900CC27D0;
+					};
+				};
+			};
+			buildConfigurationList = D3A2E21523FC48F900CC27D0 /* Build configuration list for PBXProject "Wolearn" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3A2E21123FC48F900CC27D0;
+			productRefGroup = D3A2E21B23FC48F900CC27D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3A2E21923FC48F900CC27D0 /* Wolearn */,
+				D3A2E22F23FC48FB00CC27D0 /* WolearnTests */,
+				D3A2E23A23FC48FB00CC27D0 /* WolearnUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3A2E21823FC48F900CC27D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A2E22A23FC48FA00CC27D0 /* LaunchScreen.storyboard in Resources */,
+				D3A2E22723FC48FA00CC27D0 /* Preview Assets.xcassets in Resources */,
+				D3A2E22423FC48FA00CC27D0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A2E22E23FC48FB00CC27D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A2E23923FC48FB00CC27D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3A2E21623FC48F900CC27D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A2E21E23FC48F900CC27D0 /* AppDelegate.swift in Sources */,
+				D3A2E22023FC48F900CC27D0 /* SceneDelegate.swift in Sources */,
+				D3A2E22223FC48F900CC27D0 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A2E22C23FC48FB00CC27D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A2E23523FC48FB00CC27D0 /* WolearnTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A2E23723FC48FB00CC27D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A2E24023FC48FB00CC27D0 /* WolearnUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3A2E23223FC48FB00CC27D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3A2E21923FC48F900CC27D0 /* Wolearn */;
+			targetProxy = D3A2E23123FC48FB00CC27D0 /* PBXContainerItemProxy */;
+		};
+		D3A2E23D23FC48FB00CC27D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3A2E21923FC48F900CC27D0 /* Wolearn */;
+			targetProxy = D3A2E23C23FC48FB00CC27D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D3A2E22823FC48FA00CC27D0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3A2E22923FC48FA00CC27D0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D3A2E24223FC48FB00CC27D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D3A2E24323FC48FB00CC27D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3A2E24523FC48FB00CC27D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Wolearn/Preview Content\"";
+				DEVELOPMENT_TEAM = K3EBJ8K5KL;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Wolearn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = by.isysoi.Wolearn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3A2E24623FC48FB00CC27D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Wolearn/Preview Content\"";
+				DEVELOPMENT_TEAM = K3EBJ8K5KL;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Wolearn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = by.isysoi.Wolearn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D3A2E24823FC48FB00CC27D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3EBJ8K5KL;
+				INFOPLIST_FILE = WolearnTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = by.isysoi.WolearnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wolearn.app/Wolearn";
+			};
+			name = Debug;
+		};
+		D3A2E24923FC48FB00CC27D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3EBJ8K5KL;
+				INFOPLIST_FILE = WolearnTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = by.isysoi.WolearnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wolearn.app/Wolearn";
+			};
+			name = Release;
+		};
+		D3A2E24B23FC48FB00CC27D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3EBJ8K5KL;
+				INFOPLIST_FILE = WolearnUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = by.isysoi.WolearnUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wolearn;
+			};
+			name = Debug;
+		};
+		D3A2E24C23FC48FB00CC27D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3EBJ8K5KL;
+				INFOPLIST_FILE = WolearnUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = by.isysoi.WolearnUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wolearn;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3A2E21523FC48F900CC27D0 /* Build configuration list for PBXProject "Wolearn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3A2E24223FC48FB00CC27D0 /* Debug */,
+				D3A2E24323FC48FB00CC27D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3A2E24423FC48FB00CC27D0 /* Build configuration list for PBXNativeTarget "Wolearn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3A2E24523FC48FB00CC27D0 /* Debug */,
+				D3A2E24623FC48FB00CC27D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3A2E24723FC48FB00CC27D0 /* Build configuration list for PBXNativeTarget "WolearnTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3A2E24823FC48FB00CC27D0 /* Debug */,
+				D3A2E24923FC48FB00CC27D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3A2E24A23FC48FB00CC27D0 /* Build configuration list for PBXNativeTarget "WolearnUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3A2E24B23FC48FB00CC27D0 /* Debug */,
+				D3A2E24C23FC48FB00CC27D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D3A2E21223FC48F900CC27D0 /* Project object */;
+}
