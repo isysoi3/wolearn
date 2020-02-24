@@ -4,5 +4,6 @@ target 'Wolearn' do
   use_frameworks!
 
   pod 'Alamofire'
+  pod "R.swift"
 
 end

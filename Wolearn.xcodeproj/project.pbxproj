@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		977BA88CCCC6BD9D19D9839B /* Pods_Wolearn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70182ED8D95FF5034882E312 /* Pods_Wolearn.framework */; };
+		D34FA3932403C8D900299919 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA3922403C8D800299919 /* R.generated.swift */; };
 		D3A2E21E23FC48F900CC27D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A2E21D23FC48F900CC27D0 /* AppDelegate.swift */; };
 		D3A2E22023FC48F900CC27D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A2E21F23FC48F900CC27D0 /* SceneDelegate.swift */; };
 		D3A2E22223FC48F900CC27D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A2E22123FC48F900CC27D0 /* ContentView.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		1B072E0F60E6AE59F7963583 /* Pods-Wolearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wolearn.debug.xcconfig"; path = "Target Support Files/Pods-Wolearn/Pods-Wolearn.debug.xcconfig"; sourceTree = "<group>"; };
 		70182ED8D95FF5034882E312 /* Pods_Wolearn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wolearn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D34FA3922403C8D800299919 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		D3A2E21A23FC48F900CC27D0 /* Wolearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wolearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A2E21D23FC48F900CC27D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3A2E21F23FC48F900CC27D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D34FA38E2403C77400299919 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D34FA38F2403C77F00299919 /* Login */,
+				D3A2E22123FC48F900CC27D0 /* ContentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D34FA38F2403C77F00299919 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D34FA3902403C79D00299919 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D34FA3922403C8D800299919 /* R.generated.swift */,
+				D3A2E22323FC48FA00CC27D0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		D3A2E21123FC48F900CC27D0 = {
 			isa = PBXGroup;
 			children = (
@@ -115,12 +142,12 @@
 		D3A2E21C23FC48F900CC27D0 /* Wolearn */ = {
 			isa = PBXGroup;
 			children = (
+				D3A2E22B23FC48FA00CC27D0 /* Info.plist */,
 				D3A2E21D23FC48F900CC27D0 /* AppDelegate.swift */,
 				D3A2E21F23FC48F900CC27D0 /* SceneDelegate.swift */,
-				D3A2E22123FC48F900CC27D0 /* ContentView.swift */,
-				D3A2E22323FC48FA00CC27D0 /* Assets.xcassets */,
 				D3A2E22823FC48FA00CC27D0 /* LaunchScreen.storyboard */,
-				D3A2E22B23FC48FA00CC27D0 /* Info.plist */,
+				D34FA38E2403C77400299919 /* UI */,
+				D34FA3902403C79D00299919 /* Resources */,
 				D3A2E22523FC48FA00CC27D0 /* Preview Content */,
 			);
 			path = Wolearn;
@@ -168,6 +195,7 @@
 			buildConfigurationList = D3A2E24423FC48FB00CC27D0 /* Build configuration list for PBXNativeTarget "Wolearn" */;
 			buildPhases = (
 				03BC80856655CCD12C61B370 /* [CP] Check Pods Manifest.lock */,
+				D34FA3912403C80500299919 /* ShellScript */,
 				D3A2E21623FC48F900CC27D0 /* Sources */,
 				D3A2E21723FC48F900CC27D0 /* Frameworks */,
 				D3A2E21823FC48F900CC27D0 /* Resources */,
@@ -328,6 +356,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wolearn/Pods-Wolearn-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D34FA3912403C80500299919 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -338,6 +385,7 @@
 				D3A2E21E23FC48F900CC27D0 /* AppDelegate.swift in Sources */,
 				D3A2E22023FC48F900CC27D0 /* SceneDelegate.swift in Sources */,
 				D3A2E22223FC48F900CC27D0 /* ContentView.swift in Sources */,
+				D34FA3932403C8D900299919 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
