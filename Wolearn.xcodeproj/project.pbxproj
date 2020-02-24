@@ -195,7 +195,8 @@
 			buildConfigurationList = D3A2E24423FC48FB00CC27D0 /* Build configuration list for PBXNativeTarget "Wolearn" */;
 			buildPhases = (
 				03BC80856655CCD12C61B370 /* [CP] Check Pods Manifest.lock */,
-				D34FA3912403C80500299919 /* ShellScript */,
+				D34FA3912403C80500299919 /* Run Script (R.swift) */,
+				D34FA39C2403EDE800299919 /* Run Script (SwiftLint) */,
 				D3A2E21623FC48F900CC27D0 /* Sources */,
 				D3A2E21723FC48F900CC27D0 /* Frameworks */,
 				D3A2E21823FC48F900CC27D0 /* Resources */,
@@ -356,7 +357,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wolearn/Pods-Wolearn-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D34FA3912403C80500299919 /* ShellScript */ = {
+		D34FA3912403C80500299919 /* Run Script (R.swift) */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -366,6 +367,7 @@
 			inputPaths = (
 				"$TEMP_DIR/rswift-lastrun",
 			);
+			name = "Run Script (R.swift)";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -374,6 +376,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		D34FA39C2403EDE800299919 /* Run Script (SwiftLint) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (SwiftLint)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

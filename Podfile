@@ -3,7 +3,13 @@ platform :ios, '13.0'
 target 'Wolearn' do
   use_frameworks!
 
+  # Network
   pod 'Alamofire'
-  pod "R.swift"
+  
+  # Resources
+  pod 'R.swift'
+  
+  # Linter
+  pod 'SwiftLint'
 
 end
