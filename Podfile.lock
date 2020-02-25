@@ -1,28 +1,28 @@
 PODS:
-  - Alamofire (4.9.1)
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
-  - SwiftLint (0.38.2)
+  - SwiftLint (0.39.1)
+  - SwiftyBeaver (1.8.4)
 
 DEPENDENCIES:
-  - Alamofire
   - R.swift
   - SwiftLint
+  - SwiftyBeaver
 
 SPEC REPOS:
   trunk:
-    - Alamofire
     - R.swift
     - R.swift.Library
     - SwiftLint
+    - SwiftyBeaver
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
-  SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
+  SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
+  SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
 
-PODFILE CHECKSUM: db30edd9fdbf787636595d918a26bb0463d83f2a
+PODFILE CHECKSUM: 41f883a722861ecb3ad5029e3d46d866424f2e32
 
 COCOAPODS: 1.8.4

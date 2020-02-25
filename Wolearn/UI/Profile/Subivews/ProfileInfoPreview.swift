@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct ProfileInfoPreview: View {
+
+    @Binding var userInfo: User?
+
     var body: some View {
         VStack(alignment: .center, spacing: 60) {
             Image(uiImage: R.image.user_avatar()!).frame(width: 80, height: 80)
@@ -18,9 +21,10 @@ struct ProfileInfoPreview: View {
                         .fill(Color.white)
                         .shadow(radius: 3)
                     VStack(alignment: .center) {
-                        Text("dsds").foregroundColor(Color.yellow)
+                        Text("Today").foregroundColor(Color.yellow)
                         Divider()
-                        Text("dsds").foregroundColor(Color.yellow)
+                        Text("\(userInfo?.statistics.today ?? 0) word\(userInfo?.statistics.today ?? 0 > 1 ? "s" : "")")
+                            .foregroundColor(Color.yellow)
                     }
                 }.frame(width: 96, height: 48)
                 ZStack {
@@ -28,9 +32,9 @@ struct ProfileInfoPreview: View {
                         .fill(Color.white)
                         .shadow(radius: 3)
                     VStack(alignment: .center) {
-                        Text("dsds").foregroundColor(Color.yellow)
+                        Text("Total").foregroundColor(Color.yellow)
                         Divider()
-                        Text("dsds").foregroundColor(Color.yellow)
+                        Text("\(userInfo?.statistics.total ?? 0) word\(userInfo?.statistics.total ?? 0 > 1 ? "s" : "")").foregroundColor(Color.yellow)
                     }
                 }.frame(width: 96, height: 48)
                 ZStack {
@@ -38,9 +42,9 @@ struct ProfileInfoPreview: View {
                         .fill(Color.white)
                         .shadow(radius: 3)
                     VStack(alignment: .center) {
-                        Text("dsds").foregroundColor(Color.yellow)
+                        Text("Categories").foregroundColor(Color.yellow)
                         Divider()
-                        Text("dsds").foregroundColor(Color.yellow)
+                        Text("\(userInfo?.statistics.categories ?? 0)").foregroundColor(Color.yellow)
                     }
                 }.frame(width: 96, height: 48)
             }
@@ -50,6 +54,6 @@ struct ProfileInfoPreview: View {
 
 struct ProfileInfoPreview_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileInfoPreview()
+        ProfileInfoPreview(userInfo: .constant(.none))
     }
 }

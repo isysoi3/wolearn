@@ -9,28 +9,31 @@
 import SwiftUI
 
 struct SettingsView: View {
+
+    @ObservedObject var viewModel = SettingsViewModel()
+
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
             Spacer()
-            Button(action: { }) {
+            Button(action: viewModel.removeAccount) {
                 Text("Delete account")
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 36)
                     .background(Color.yellow)
                     .foregroundColor(Color.black)
             }.padding(.horizontal, 16.0)
-            Button(action: { }) {
+            Button(action: viewModel.resetStatistics) {
                 Text("Reset statistics")
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 36)
                     .background(Color.yellow)
                     .foregroundColor(Color.black)
             }.padding(.horizontal, 16.0)
-            Button(action: { }) {
+            Button(action: viewModel.logout) {
                 Text("Logout")
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 36)
                     .background(Color.yellow)
                     .foregroundColor(Color.black)
             }.padding(.horizontal, 16.0)
-        }.padding(.bottom, 48)
+        }.padding(.bottom, 16)
     }
 }
 

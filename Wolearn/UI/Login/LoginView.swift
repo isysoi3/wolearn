@@ -10,33 +10,45 @@ import SwiftUI
 
 struct LoginView: View {
 
-    @State private var login: String = String()
-    @State private var password: String = String()
+    @ObservedObject var viewModel = LoginViewModel()
 
     var body: some View {
+        LoadingView(isShowing: $viewModel.isLoading, content: buildContent)
+            .alert(isPresented: $viewModel.isError, content: {
+                Alert(title: Text("Error"),
+                      message: Text(viewModel.errorMessage ?? ""),
+                      dismissButton: .default(Text("OK"))
+                )
+            })
+            .sheet(isPresented: $viewModel.showRegistration, content: { RegistrationView() })
+    }
+
+    private func buildContent() -> some View {
         VStack(alignment: HorizontalAlignment.center, spacing: 20) {
-            TextField("Login", text: $login)
+            TextField("Login", text: $viewModel.userLogin)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.horizontal, 16)
-            SecureField("Password", text: $password)
+            SecureField("Password", text: $viewModel.userPassword)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.horizontal, 16)
-            Button(action: { }) {
+            Button(action: viewModel.login) {
                 Text("Login")
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 36)
                     .background(Color.yellow)
                     .foregroundColor(Color.black)
             }.padding(.horizontal, 16.0)
                 .offset(y: 20)
-            Button(action: { }) {
+            Button(action: viewModel.register) {
                 Text("Register")
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 36)
                     .background(Color.clear)
                     .foregroundColor(Color.yellow)
             }.padding(.horizontal, 16.0)
                 .offset(y: 20)
-        }.background(Image(uiImage: R.image.login_background()!))
+        }
+        .background(Image(uiImage: R.image.login_background()!))
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
