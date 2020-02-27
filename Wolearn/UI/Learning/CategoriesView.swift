@@ -27,8 +27,8 @@ struct CategoriesView: View {
                 .offset(y: 10)
                 .padding(.bottom, 10)
             ViewStyles.primaryButton(text: "Repeat words", action: viewModel.startLearning)
-                .offset(y: 10)
-                .padding(.bottom, 10)
+                .offset(y: 20)
+                .padding(.bottom, 20)
         }.padding([.horizontal, .bottom], 16)
             .alert(isPresented: $viewModel.isError, content: {
                 Alert(title: Text("Error"),
