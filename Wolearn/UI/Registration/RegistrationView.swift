@@ -13,12 +13,12 @@ struct RegistrationView: View {
     @ObservedObject var viewModel: RegistrationViewModel
 
     var body: some View {
-        LoadingView(isShowing: $viewModel.isLoading, content: buildContent)
+        LoadingView(isShowing: $viewModel.isLoading, content: buildContent).edgesIgnoringSafeArea(.all)
     }
 
     private func buildContent() -> some View {
         ZStack {
-            Image(uiImage: R.image.login_background()!)
+            Image(uiImage: R.image.login_background()!).resizable()
             VStack(alignment: .center, spacing: 10) {
                 InputView(title: "Login", text: $viewModel.login, isSecured: false)
                 InputView(title: "Password", text: $viewModel.password, isSecured: true)

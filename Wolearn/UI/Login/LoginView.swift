@@ -13,13 +13,13 @@ struct LoginView: View {
     @ObservedObject var viewModel: LoginViewModel
 
     var body: some View {
-        LoadingView(isShowing: $viewModel.isLoading, content: buildContent)
+        LoadingView(isShowing: $viewModel.isLoading, content: buildContent).edgesIgnoringSafeArea(.all)
     }
 
     private func buildContent() -> some View {
         ZStack {
             ActivityIndicator(isAnimating: $viewModel.isLoading, style: .large)
-            Image(uiImage: R.image.login_background()!)
+            Image(uiImage: R.image.login_background()!).resizable()
             VStack(alignment: .center, spacing: 10) {
                 InputView(title: "Login", text: $viewModel.userLogin, isSecured: false)
                 InputView(title: "Password", text: $viewModel.userPassword, isSecured: true)
