@@ -17,9 +17,12 @@ final class CategoriesViewModel: NetworkViewModel {
 
     init(coordinator: AppCoordinator) {
         self.coordinator = coordinator
+        super.init()
+        
+        loadInfo()
     }
 
-    func loadInfo() {
+    private func loadInfo() {
         let token = AppState.shared.token!
         let request = GetCategoriesRequest(token: token)
         doRequest(request) { [weak self] categories in

@@ -15,18 +15,29 @@ struct ProfileView: View {
     init() {
         UITableView.appearance().separatorColor = .clear
     }
-
+    
     var body: some View {
-        VStack(alignment: HorizontalAlignment.leading) {
-            ProfileInfoPreview(userInfo: $viewModel.user).offset(x: 16, y: 10)
-            Text("History:").offset(x: 16, y: 20)
-            List(viewModel.history) {
-                HistoryRow(item: $0)
-            }
-            .onAppear { UITableView.appearance().separatorStyle = .none }
-            .onDisappear { UITableView.appearance().separatorStyle = .singleLine }
-            .offset(y: 20)
-        }.onAppear(perform: { [weak viewModel] in viewModel?.loadInfo() })
+        LoadingView(isShowing: $viewModel.isLoading, content: buildContent)
+    }
+    
+    private func buildContent() -> some View {
+        VStack(alignment: .leading) {
+            ProfileInfoPreview(userInfo: $viewModel.user)
+                .background(Color.white)
+                .padding(.horizontal, 16)
+                .shadow(radius: 2)
+            Text("History:").padding(.leading, 16).padding(.top, 16)
+            List(viewModel.history, rowContent: HistoryRow.init)
+                .onAppear { UITableView.appearance().separatorStyle = .none }
+                .onDisappear { UITableView.appearance().separatorStyle = .singleLine }
+        }
+        .alert(isPresented: $viewModel.isError, content: {
+            Alert(title: Text("Error"),
+                  message: Text(viewModel.errorMessage ?? ""),
+                  dismissButton: .default(Text("OK"))
+            )
+        }).background(Color.white)
+            .padding(.top, 16)
     }
 
 }

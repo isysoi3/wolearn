@@ -14,45 +14,33 @@ struct LoginView: View {
 
     var body: some View {
         LoadingView(isShowing: $viewModel.isLoading, content: buildContent)
-            .alert(isPresented: $viewModel.isError, content: {
-                Alert(title: Text("Error"),
-                      message: Text(viewModel.errorMessage ?? ""),
-                      dismissButton: .default(Text("OK"))
-                )
-            })
     }
 
     private func buildContent() -> some View {
-        VStack(alignment: HorizontalAlignment.center, spacing: 20) {
-            TextField("Login", text: $viewModel.userLogin)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal, 16)
-            SecureField("Password", text: $viewModel.userPassword)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal, 16)
-            Button(action: viewModel.login) {
-                Text("Login")
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 36)
-                    .background(Color.yellow)
-                    .foregroundColor(Color.black)
-            }.padding(.horizontal, 16.0)
-                .offset(y: 20)
-            Button(action: viewModel.register) {
-                Text("Register")
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 36)
-                    .background(Color.clear)
-                    .foregroundColor(Color.yellow)
-            }.padding(.horizontal, 16.0)
-                .offset(y: 20)
+        ZStack {
+            ActivityIndicator(isAnimating: $viewModel.isLoading, style: .large)
+            Image(uiImage: R.image.login_background()!)
+            VStack(alignment: .center, spacing: 10) {
+                InputView(title: "Login", text: $viewModel.userLogin, isSecured: false)
+                InputView(title: "Password", text: $viewModel.userPassword, isSecured: true)
+                ViewStyles.primaryButton(text: "Login", action: viewModel.login)
+                    .offset(y: 30)
+                    .padding(.bottom, 30)
+                ViewStyles.baseButton(text: "Register", action: viewModel.register)
+            }.padding(.horizontal, 32)
         }
-        .background(Image(uiImage: R.image.login_background()!))
+        .alert(isPresented: $viewModel.isError, content: {
+            Alert(title: Text("Error"),
+                  message: Text(viewModel.errorMessage ?? ""),
+                  dismissButton: .default(Text("OK"))
+            )
+        })
     }
 
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-//        LoginView(coordinator: AppCoordinator())
-        EmptyView()
+        LoginView(viewModel: LoginViewModel(coordinator: AppCoordinator()))
     }
 }

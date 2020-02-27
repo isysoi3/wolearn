@@ -13,35 +13,36 @@ struct CategoriesView: View {
     @ObservedObject var viewModel: CategoriesViewModel
 
     var body: some View {
-        VStack(alignment: HorizontalAlignment.center, spacing: 16) {
-            TextField("Search", text: $viewModel.searchText)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal, 16)
-                .offset(y: 16)
-            List(viewModel.categories) {  CategoryRow(content: $0) }
+        LoadingView(isShowing: $viewModel.isLoading, content: buildContent)
+    }
+    
+    private func buildContent() -> some View {
+        VStack(alignment: .center) {
+            //            TextField("Search", text: $viewModel.searchText)
+            //                .textFieldStyle(RoundedBorderTextFieldStyle())
+            List(viewModel.categories, rowContent: CategoryRow.init)
                 .onAppear { UITableView.appearance().separatorStyle = .none }
                 .onDisappear { UITableView.appearance().separatorStyle = .singleLine }
-            Button(action: viewModel.startLearning) {
-                Text("Start learning new words")
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 36)
-                    .background(Color.yellow)
-                    .foregroundColor(Color.black)
-            }.padding(.horizontal, 16.0)
-            .offset(y: -16)
-            Button(action: viewModel.startRepeat) {
-                Text("Repeat words")
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 36)
-                    .background(Color.yellow)
-                    .foregroundColor(Color.black)
-            }.padding(.horizontal, 16.0)
-                .offset(y: -16)
-        }.onAppear(perform: { [weak viewModel] in viewModel?.loadInfo() })
+            ViewStyles.primaryButton(text: "Start learning new words", action: viewModel.startLearning)
+                .offset(y: 10)
+                .padding(.bottom, 10)
+            ViewStyles.primaryButton(text: "Repeat words", action: viewModel.startLearning)
+                .offset(y: 10)
+                .padding(.bottom, 10)
+        }.padding([.horizontal, .bottom], 16)
+            .alert(isPresented: $viewModel.isError, content: {
+                Alert(title: Text("Error"),
+                      message: Text(viewModel.errorMessage ?? ""),
+                      dismissButton: .default(Text("OK"))
+                )
+            }).background(Color.white)
+            
     }
 
 }
 
 struct CategoriesView_Previews: PreviewProvider {
     static var previews: some View {
-        EmptyView()
+        CategoriesView(viewModel: CategoriesViewModel(coordinator: AppCoordinator()))
     }
 }

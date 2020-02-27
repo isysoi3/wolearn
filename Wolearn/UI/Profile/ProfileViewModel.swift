@@ -13,6 +13,12 @@ final class ProfileViewModel: NetworkViewModel {
     @Published var user: User?
     @Published var history: [HistoryItem] = []
 
+    override init() {
+        super.init()
+        
+        loadInfo()
+    }
+    
     func loadInfo() {
         getUserInfo()
         getHistory()

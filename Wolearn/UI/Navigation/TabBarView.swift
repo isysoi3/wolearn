@@ -10,8 +10,6 @@ import SwiftUI
 
 struct TabBarView: View {
 
-    @State private var selected = 0
-
     private let coordinator: AppCoordinator
 
     init(coordinator: AppCoordinator) {
@@ -20,25 +18,40 @@ struct TabBarView: View {
         UITabBar.appearance().tintColor = .blue
         UITabBar.appearance().layer.borderWidth = 0.5
         UITabBar.appearance().layer.borderColor = UIColor.black.cgColor
+        UINavigationBar.appearance().backgroundColor = UIColor.purple
+        UINavigationBar.appearance().barTintColor = .clear
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
     }
 
     var body: some View {
-        TabView(selection: $selected) {
-            ProfileView()
-                .tabItem {
-                    Image(uiImage: R.image.profile_icon()!)
-                    Text("Profile")
-            }.tag(0)
-            CategoriesView(viewModel: CategoriesViewModel(coordinator: coordinator))
-                .tabItem {
-                    Image(uiImage: R.image.learning_icon()!)
-                    Text("Learning")
-            }.tag(1)
-            SettingsView(viewModel: SettingsViewModel(coordinator: coordinator))
-                .tabItem {
-                    Image(uiImage: R.image.settings_icon()!)
-                    Text("Settings")
-            }.tag(2)
+        TabView {
+            NavigationView {
+                ProfileView()
+                    .navigationBarItems(leading: Text("Wolearn").font(.title).foregroundColor(.white))
+                    .navigationBarTitle("", displayMode: .inline)
+                    .navigationBarHidden(false)
+            }.tabItem {
+                Image(uiImage: R.image.profile_icon()!)
+//                Text("Profile")
+            }
+            NavigationView {
+                CategoriesView(viewModel: CategoriesViewModel(coordinator: coordinator))
+                    .navigationBarItems(leading: Text("Wolearn").font(.title).foregroundColor(.white))
+                    .navigationBarTitle("", displayMode: .inline)
+                    .navigationBarHidden(false)
+            }.tabItem {
+                Image(uiImage: R.image.learning_icon()!)
+//                Text("Learning")
+            }
+            NavigationView {
+                SettingsView(viewModel: SettingsViewModel(coordinator: coordinator))
+                    .navigationBarItems(leading: Text("Wolearn").font(.title).foregroundColor(.white))
+                    .navigationBarTitle("", displayMode: .inline)
+                    .navigationBarHidden(false)
+            }.tabItem {
+                Image(uiImage: R.image.settings_icon()!)
+//                Text("Settings")
+            }
         }
     }
 
@@ -46,6 +59,6 @@ struct TabBarView: View {
 
 struct NavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        EmptyView()
+        TabBarView(coordinator: AppCoordinator())
     }
 }

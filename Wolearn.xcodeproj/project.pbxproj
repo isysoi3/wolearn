@@ -46,6 +46,9 @@
 		D34FA3E12406633400299919 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA3E02406633400299919 /* AppCoordinator.swift */; };
 		D392E6722407D930006CE3AA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392E6712407D930006CE3AA /* Data.swift */; };
 		D392E6742407D941006CE3AA /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392E6732407D941006CE3AA /* Encodable.swift */; };
+		D392E6762407FF56006CE3AA /* ViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392E6752407FF56006CE3AA /* ViewStyles.swift */; };
+		D392E67824082381006CE3AA /* HorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392E67724082381006CE3AA /* HorizontalLine.swift */; };
+		D392E67A24082508006CE3AA /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392E67924082508006CE3AA /* InputView.swift */; };
 		D39A777924069E230031F034 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A777824069E230031F034 /* Empty.swift */; };
 		D39A777B2406A06C0031F034 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A777A2406A06C0031F034 /* ProfileViewModel.swift */; };
 		D39A777D2406A1460031F034 /* HistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A777C2406A1460031F034 /* HistoryRow.swift */; };
@@ -119,6 +122,9 @@
 		D34FA3E02406633400299919 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		D392E6712407D930006CE3AA /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D392E6732407D941006CE3AA /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		D392E6752407FF56006CE3AA /* ViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyles.swift; sourceTree = "<group>"; };
+		D392E67724082381006CE3AA /* HorizontalLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalLine.swift; sourceTree = "<group>"; };
+		D392E67924082508006CE3AA /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		D39A777824069E230031F034 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		D39A777A2406A06C0031F034 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D39A777C2406A1460031F034 /* HistoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRow.swift; sourceTree = "<group>"; };
@@ -213,6 +219,9 @@
 			isa = PBXGroup;
 			children = (
 				D331FA222406806B00D362BE /* LoadingView.swift */,
+				D392E67724082381006CE3AA /* HorizontalLine.swift */,
+				D392E67924082508006CE3AA /* InputView.swift */,
+				D392E6752407FF56006CE3AA /* ViewStyles.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -644,7 +653,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/SwiftLint/swiftlint autocorrect\n${PODS_ROOT}/SwiftLint/swiftlint\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#${PODS_ROOT}/SwiftLint/swiftlint autocorrect\n#${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -674,7 +683,9 @@
 				D34FA3A42404044300299919 /* SettingsView.swift in Sources */,
 				D3A2E22023FC48F900CC27D0 /* SceneDelegate.swift in Sources */,
 				D33ACB9A2406AECA0040DAD1 /* CategoryRow.swift in Sources */,
+				D392E67A24082508006CE3AA /* InputView.swift in Sources */,
 				D34FA3DF2405B96E00299919 /* MemorizedWord.swift in Sources */,
+				D392E67824082381006CE3AA /* HorizontalLine.swift in Sources */,
 				D3A2E22223FC48F900CC27D0 /* LoginView.swift in Sources */,
 				D392E6742407D941006CE3AA /* Encodable.swift in Sources */,
 				D33ACB9C2406AEE50040DAD1 /* CategoriesViewModel.swift in Sources */,
@@ -687,6 +698,7 @@
 				D33ACB9E2406AF010040DAD1 /* DateFormatter.swift in Sources */,
 				D34FA3D72405B7BA00299919 /* ResetStatisticsRequest.swift in Sources */,
 				D33ACBA92407C4530040DAD1 /* RouterView.swift in Sources */,
+				D392E6762407FF56006CE3AA /* ViewStyles.swift in Sources */,
 				D34FA3A7240414E600299919 /* CategoriesView.swift in Sources */,
 				D34FA3B924059C8800299919 /* ServiceError.swift in Sources */,
 				D34FA3982403D9EE00299919 /* RegistrationView.swift in Sources */,

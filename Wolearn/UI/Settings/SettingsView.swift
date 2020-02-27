@@ -13,32 +13,29 @@ struct SettingsView: View {
     @ObservedObject var viewModel: SettingsViewModel
 
     var body: some View {
+        LoadingView(isShowing: $viewModel.isLoading, content: buildContent)
+    }
+    
+    private func buildContent() -> some View {
         VStack(alignment: .center, spacing: 20) {
             Spacer()
-            Button(action: viewModel.removeAccount) {
-                Text("Delete account")
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 36)
-                    .background(Color.yellow)
-                    .foregroundColor(Color.black)
-            }.padding(.horizontal, 16.0)
-            Button(action: viewModel.resetStatistics) {
-                Text("Reset statistics")
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 36)
-                    .background(Color.yellow)
-                    .foregroundColor(Color.black)
-            }.padding(.horizontal, 16.0)
-            Button(action: viewModel.logout) {
-                Text("Logout")
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 36)
-                    .background(Color.yellow)
-                    .foregroundColor(Color.black)
-            }.padding(.horizontal, 16.0)
-        }.padding(.bottom, 16)
+            ViewStyles.primaryButton(text: "Delete account", action: viewModel.removeAccount)
+            ViewStyles.primaryButton(text: "Reset statistics", action: viewModel.resetStatistics)
+            ViewStyles.primaryButton(text: "Logout", action: viewModel.logout)
+        }
+        .padding([.bottom, .horizontal], 16)
+        .alert(isPresented: $viewModel.isError, content: {
+            Alert(title: Text("Error"),
+                  message: Text(viewModel.errorMessage ?? ""),
+                  dismissButton: .default(Text("OK"))
+            )
+        })
     }
+    
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        EmptyView()
+        SettingsView(viewModel: SettingsViewModel(coordinator: AppCoordinator()))
     }
 }

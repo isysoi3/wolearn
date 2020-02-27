@@ -28,23 +28,22 @@ struct LoadingView<Content>: View where Content: View {
     var content: () -> Content
 
     var body: some View {
-        GeometryReader { geometry in
-            ZStack(alignment: .center) {
-
-                self.content()
-                    .disabled(self.isShowing)
-                    .blur(radius: self.isShowing ? 3 : 0)
-
-                VStack {
-                    Text("Loading...")
-                    ActivityIndicator(isAnimating: .constant(true), style: .large)
+        ZStack(alignment: .center) {
+            if isShowing {
+                ZStack {
+                    content().disabled(true).background(Color.gray)
+                    Rectangle().fill(Color.black).opacity(0.4)
                 }
-                .frame(width: geometry.size.width / 2,
-                       height: geometry.size.height / 5)
-                .background(Color.secondary.colorInvert())
-                .foregroundColor(Color.primary)
-                .cornerRadius(20)
-                .opacity(self.isShowing ? 1 : 0)
+                VStack {
+                    Text("Loading...").padding(.horizontal, 30).padding(.top, 20)
+                    ActivityIndicator(isAnimating: .constant(true), style: .whiteLarge).padding(.bottom, 20)
+                }
+                .background(Color.black)
+                .foregroundColor(Color.white)
+                .opacity(0.7)
+                .cornerRadius(10)
+            } else {
+                content()
             }
         }
     }

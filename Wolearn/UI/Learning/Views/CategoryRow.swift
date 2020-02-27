@@ -14,9 +14,7 @@ struct CategoryRow: View {
     @State var content: Category
 
     var body: some View {
-        Button(action: {
-            self.content.isSelected.toggle()
-        }) {
+        Button(action: { self.content.isSelected.toggle() }) {
             HStack {
                 Image(uiImage: R.image.learning_icon()!)
                     .frame(width: 45, height: 45)

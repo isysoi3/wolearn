@@ -14,6 +14,22 @@ struct RegistrationView: View {
 
     var body: some View {
         LoadingView(isShowing: $viewModel.isLoading, content: buildContent)
+    }
+
+    private func buildContent() -> some View {
+        ZStack {
+            Image(uiImage: R.image.login_background()!)
+            VStack(alignment: .center, spacing: 10) {
+                InputView(title: "Login", text: $viewModel.login, isSecured: false)
+                InputView(title: "Password", text: $viewModel.password, isSecured: true)
+                InputView(title: "Name", text: $viewModel.name, isSecured: false)
+                InputView(title: "Surname", text: $viewModel.surname, isSecured: false)
+                ViewStyles.primaryButton(text: "Register", action: viewModel.register)
+                    .offset(y: 30)
+                    .padding(.bottom, 30)
+                ViewStyles.baseButton(text: "Back", action: viewModel.goBack)
+            }.padding(.horizontal, 32)
+        }
         .alert(isPresented: $viewModel.isError, content: {
             Alert(title: Text("Error"),
                   message: Text(viewModel.errorMessage ?? ""),
@@ -22,42 +38,10 @@ struct RegistrationView: View {
         })
     }
 
-    private func buildContent() -> some View {
-        VStack(alignment: HorizontalAlignment.center, spacing: 20) {
-            TextField("Enter login", text: $viewModel.login)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal, 16)
-            SecureField("Enter password", text: $viewModel.password)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal, 16)
-            TextField("Enter name", text: $viewModel.name)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal, 16)
-            TextField("Enter surname", text: $viewModel.surname)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal, 16)
-            Button(action: viewModel.register) {
-                Text("Register")
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 36)
-                    .background(Color.yellow)
-                    .foregroundColor(Color.black)
-            }.padding(.horizontal, 16.0)
-                .offset(y: 20)
-            Button(action: viewModel.goBack) {
-                Text("Back")
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 36)
-                    .background(Color.clear)
-                    .foregroundColor(Color.yellow)
-            }.padding(.horizontal, 16.0)
-                .offset(y: 20)
-        }.background(Image(uiImage: R.image.login_background()!))
-    }
-
 }
 
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
-//        RegistrationView()
-        EmptyView()
+        RegistrationView(viewModel: RegistrationViewModel(coordinator: AppCoordinator()))
     }
 }
