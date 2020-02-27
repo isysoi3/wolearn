@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		91762A432196068D4929B12A /* libPods-Wolearn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E19F90A0BB696E9021082D27 /* libPods-Wolearn.a */; };
+		66ECF13B30C4EF4C5B108621 /* libPods-Wolearn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA6D8A342D0B13D7A2466FA /* libPods-Wolearn.a */; };
 		D331FA232406806B00D362BE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D331FA222406806B00D362BE /* LoadingView.swift */; };
 		D331FA252406878E00D362BE /* NetworkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D331FA242406878E00D362BE /* NetworkViewModel.swift */; };
 		D33ACB972406A45B0040DAD1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33ACB962406A45B0040DAD1 /* AppState.swift */; };
@@ -83,6 +83,7 @@
 /* Begin PBXFileReference section */
 		16EE8D16E4515A16C9BF2EA4 /* Pods_Wolearn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wolearn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B55A0E376817E0F0BBDA580 /* Pods-Wolearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wolearn.release.xcconfig"; path = "Target Support Files/Pods-Wolearn/Pods-Wolearn.release.xcconfig"; sourceTree = "<group>"; };
+		8FA6D8A342D0B13D7A2466FA /* libPods-Wolearn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wolearn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1E803F97FC53D36912588F /* Pods-Wolearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wolearn.debug.xcconfig"; path = "Target Support Files/Pods-Wolearn/Pods-Wolearn.debug.xcconfig"; sourceTree = "<group>"; };
 		D331FA222406806B00D362BE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		D331FA242406878E00D362BE /* NetworkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewModel.swift; sourceTree = "<group>"; };
@@ -143,7 +144,6 @@
 		D3A2E23B23FC48FB00CC27D0 /* WolearnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WolearnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A2E23F23FC48FB00CC27D0 /* WolearnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolearnUITests.swift; sourceTree = "<group>"; };
 		D3A2E24123FC48FB00CC27D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E19F90A0BB696E9021082D27 /* libPods-Wolearn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wolearn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91762A432196068D4929B12A /* libPods-Wolearn.a in Frameworks */,
+				66ECF13B30C4EF4C5B108621 /* libPods-Wolearn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +175,7 @@
 		394BBBF2DC82AE03292D9412 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E19F90A0BB696E9021082D27 /* libPods-Wolearn.a */,
+				8FA6D8A342D0B13D7A2466FA /* libPods-Wolearn.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -631,7 +631,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
