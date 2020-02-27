@@ -10,19 +10,19 @@ import Foundation
 import SwiftUI
 
 struct InputView: View {
-   
+
     private let title: String
     private let text: Binding<String>
     @State private var isSecured: Bool
     @State private var isTextEmpty: Bool
-    
+
     init(title: String, text: Binding<String>, isSecured: Bool) {
         self.title = title
         self.text = text
         self._isSecured = State(initialValue: isSecured)
         self._isTextEmpty = State(initialValue: text.wrappedValue.isEmpty)
     }
-    
+
     private var textProxy: Binding<String> {
         return Binding<String>(
             get: {
@@ -34,7 +34,7 @@ struct InputView: View {
             }
         )
     }
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             if !isTextEmpty {
@@ -50,10 +50,9 @@ struct InputView: View {
                     TextField("", text: textProxy).accentColor(.yellow)
                 }
             }
-            
+
             HorizontalLine(color: .yellow, height: 2)
         }.padding(.bottom, 2)
     }
-    
-}
 
+}

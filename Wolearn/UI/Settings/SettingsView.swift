@@ -15,7 +15,7 @@ struct SettingsView: View {
     var body: some View {
         LoadingView(isShowing: $viewModel.isLoading, content: buildContent)
     }
-    
+
     private func buildContent() -> some View {
         VStack(alignment: .center, spacing: 20) {
             Spacer()
@@ -31,7 +31,7 @@ struct SettingsView: View {
             )
         })
     }
-    
+
 }
 
 struct SettingsView_Previews: PreviewProvider {

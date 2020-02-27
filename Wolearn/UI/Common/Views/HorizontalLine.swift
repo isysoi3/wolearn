@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 struct HorizontalLine: View {
-    
+
     struct HorizontalLineShape: Shape {
 
         func path(in rect: CGRect) -> Path {
@@ -22,7 +22,7 @@ struct HorizontalLine: View {
             return path
         }
     }
-    
+
     private var color: Color?
     private var height: CGFloat = 1.0
 

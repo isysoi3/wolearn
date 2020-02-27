@@ -18,7 +18,7 @@ final class CategoriesViewModel: NetworkViewModel {
     init(coordinator: AppCoordinator) {
         self.coordinator = coordinator
         super.init()
-        
+
         loadInfo()
     }
 

@@ -15,11 +15,11 @@ struct ProfileView: View {
     init() {
         UITableView.appearance().separatorColor = .clear
     }
-    
+
     var body: some View {
         LoadingView(isShowing: $viewModel.isLoading, content: buildContent)
     }
-    
+
     private func buildContent() -> some View {
         VStack(alignment: .leading) {
             ProfileInfoPreview(userInfo: $viewModel.user)

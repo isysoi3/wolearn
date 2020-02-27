@@ -15,10 +15,10 @@ final class ProfileViewModel: NetworkViewModel {
 
     override init() {
         super.init()
-        
+
         loadInfo()
     }
-    
+
     func loadInfo() {
         getUserInfo()
         getHistory()

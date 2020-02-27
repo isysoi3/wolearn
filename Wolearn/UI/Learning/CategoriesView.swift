@@ -15,7 +15,7 @@ struct CategoriesView: View {
     var body: some View {
         LoadingView(isShowing: $viewModel.isLoading, content: buildContent)
     }
-    
+
     private func buildContent() -> some View {
         VStack(alignment: .center) {
             //            TextField("Search", text: $viewModel.searchText)
@@ -36,7 +36,7 @@ struct CategoriesView: View {
                       dismissButton: .default(Text("OK"))
                 )
             }).background(Color.white)
-            
+
     }
 
 }

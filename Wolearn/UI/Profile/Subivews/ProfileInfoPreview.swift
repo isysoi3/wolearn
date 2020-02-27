@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct ProfileInfoPreview: View {
-    
+
     @Binding var userInfo: User?
-    
+
     var body: some View {
         VStack(alignment: .center, spacing: 60) {
             Image(uiImage: R.image.user_avatar()!).frame(width: 80, height: 80)
