@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CategoriesView: View {
 
-    @ObservedObject var viewModel = CategoriesViewModel()
+    @ObservedObject var viewModel: CategoriesViewModel
 
     var body: some View {
         VStack(alignment: HorizontalAlignment.center, spacing: 16) {
@@ -42,6 +42,6 @@ struct CategoriesView: View {
 
 struct CategoriesView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoriesView()
+        EmptyView()
     }
 }

@@ -7,11 +7,29 @@
 //
 
 import Foundation
+import KeychainSwift
 
 class AppState {
 
+    private let userTokenKey = "user_token_key"
+    private let keychain = KeychainSwift()
+
     static let shared = AppState()
-    var token: Token = Token(value: "Q/Un5CwpBT68mdAO8kfX2A==")
-    private init() { }
+    var token: Token? {
+        didSet {
+            if let token = token,
+                let data = token.data {
+                 keychain.set(data, forKey: userTokenKey)
+            } else {
+                keychain.delete(userTokenKey)
+            }
+        }
+    }
+    var isUserAuthorized: Bool {
+        token != nil
+    }
+    private init() {
+        token = keychain.getData(userTokenKey)?.to(type: Token.self)
+    }
 
 }

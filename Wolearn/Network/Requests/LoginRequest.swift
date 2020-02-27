@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Token: Decodable {
+struct Token: Codable {
     enum CodingKeys: String, CodingKey {
         case value = "token"
     }

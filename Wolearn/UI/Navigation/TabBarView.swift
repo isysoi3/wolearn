@@ -12,7 +12,10 @@ struct TabBarView: View {
 
     @State private var selected = 0
 
-    init() {
+    private let coordinator: AppCoordinator
+
+    init(coordinator: AppCoordinator) {
+        self.coordinator = coordinator
         UITabBar.appearance().barTintColor = .white
         UITabBar.appearance().tintColor = .blue
         UITabBar.appearance().layer.borderWidth = 0.5
@@ -26,12 +29,12 @@ struct TabBarView: View {
                     Image(uiImage: R.image.profile_icon()!)
                     Text("Profile")
             }.tag(0)
-            CategoriesView()
+            CategoriesView(viewModel: CategoriesViewModel(coordinator: coordinator))
                 .tabItem {
                     Image(uiImage: R.image.learning_icon()!)
                     Text("Learning")
             }.tag(1)
-            SettingsView()
+            SettingsView(viewModel: SettingsViewModel(coordinator: coordinator))
                 .tabItem {
                     Image(uiImage: R.image.settings_icon()!)
                     Text("Settings")
@@ -43,6 +46,6 @@ struct TabBarView: View {
 
 struct NavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView()
+        EmptyView()
     }
 }

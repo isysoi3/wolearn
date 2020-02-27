@@ -10,16 +10,23 @@ import Foundation
 
 final class SettingsViewModel: NetworkViewModel {
 
+    private let coordinator: AppCoordinator
+
+    init(coordinator: AppCoordinator) {
+        self.coordinator = coordinator
+    }
+
     func removeAccount() {
-        let token = AppState.shared.token
+        let token = AppState.shared.token!
         let request = DeleteUserRequest(token: token)
         doRequest(request) { [weak self] _ in
+            self?.coordinator.logout()
             print("success")
         }
     }
 
     func resetStatistics() {
-        let token = AppState.shared.token
+        let token = AppState.shared.token!
         let request = ResetStatisticsRequest(token: token)
         doRequest(request) { [weak self] _ in
             print("success")
@@ -27,7 +34,7 @@ final class SettingsViewModel: NetworkViewModel {
     }
 
     func logout() {
-
+        coordinator.logout()
     }
 
 }

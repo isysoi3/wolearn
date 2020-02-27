@@ -10,7 +10,7 @@ import SwiftUI
 
 struct LoginView: View {
 
-    @ObservedObject var viewModel = LoginViewModel()
+    @ObservedObject var viewModel: LoginViewModel
 
     var body: some View {
         LoadingView(isShowing: $viewModel.isLoading, content: buildContent)
@@ -20,7 +20,6 @@ struct LoginView: View {
                       dismissButton: .default(Text("OK"))
                 )
             })
-            .sheet(isPresented: $viewModel.showRegistration, content: { RegistrationView() })
     }
 
     private func buildContent() -> some View {
@@ -53,6 +52,7 @@ struct LoginView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+//        LoginView(coordinator: AppCoordinator())
+        EmptyView()
     }
 }

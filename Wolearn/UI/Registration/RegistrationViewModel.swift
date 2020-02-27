@@ -15,6 +15,16 @@ final class RegistrationViewModel: NetworkViewModel {
     @Published var name: String = String()
     @Published var surname: String = String()
 
+    private let coordinator: AppCoordinator
+
+    init(coordinator: AppCoordinator) {
+        self.coordinator = coordinator
+    }
+
+    func goBack() {
+        coordinator.goToLogin()
+    }
+
     func register() {
         let isAllFieldsFilled = !login.isEmpty
             && !password.isEmpty
@@ -26,8 +36,8 @@ final class RegistrationViewModel: NetworkViewModel {
         }
         let info = RegistrationRequestInfo(login: login, password: password, name: name, surname: surname)
         let request = RegistrationRequest(info: info)
-        doRequest(request) { _ in
-            print("top")
+        doRequest(request) { [weak self] _ in
+            self?.coordinator.goToLogin()
         }
     }
 

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SettingsView: View {
 
-    @ObservedObject var viewModel = SettingsViewModel()
+    @ObservedObject var viewModel: SettingsViewModel
 
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
@@ -39,6 +39,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        EmptyView()
     }
 }

@@ -19,7 +19,7 @@ final class ProfileViewModel: NetworkViewModel {
     }
 
     private func getUserInfo() {
-        let token = AppState.shared.token
+        let token = AppState.shared.token!
         let request = GetUserRequest(token: token)
         doRequest(request) { [weak self] user in
             self?.user = user
@@ -27,7 +27,7 @@ final class ProfileViewModel: NetworkViewModel {
     }
 
     private func getHistory() {
-        let token = AppState.shared.token
+        let token = AppState.shared.token!
         let request = HistoryRequest(token: token, range: (offset: 0, num: 20))
         doRequest(request) { [weak self] history in
             self?.history = history

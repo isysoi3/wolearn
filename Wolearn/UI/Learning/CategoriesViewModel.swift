@@ -13,8 +13,14 @@ final class CategoriesViewModel: NetworkViewModel {
     @Published var searchText = String()
     @Published var categories: [Category] = []
 
+    private let coordinator: AppCoordinator
+
+    init(coordinator: AppCoordinator) {
+        self.coordinator = coordinator
+    }
+
     func loadInfo() {
-        let token = AppState.shared.token
+        let token = AppState.shared.token!
         let request = GetCategoriesRequest(token: token)
         doRequest(request) { [weak self] categories in
             self?.categories = categories
@@ -22,18 +28,18 @@ final class CategoriesViewModel: NetworkViewModel {
     }
 
     func startLearning() {
-        let token = AppState.shared.token
+        let token = AppState.shared.token!
         let request = LearningRequest(token: token)
         doRequest(request) { [weak self] words in
-           print(words)
+            self?.coordinator.startLearning(words: words)
         }
     }
 
     func startRepeat() {
-        let token = AppState.shared.token
+        let token = AppState.shared.token!
         let request = LearningRequest(token: token)
         doRequest(request) { [weak self] words in
-           print(words)
+            self?.coordinator.startLearning(words: words)
         }
     }
 

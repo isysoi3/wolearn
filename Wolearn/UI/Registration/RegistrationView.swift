@@ -10,7 +10,7 @@ import SwiftUI
 
 struct RegistrationView: View {
 
-    @ObservedObject var viewModel = RegistrationViewModel()
+    @ObservedObject var viewModel: RegistrationViewModel
 
     var body: some View {
         LoadingView(isShowing: $viewModel.isLoading, content: buildContent)
@@ -43,6 +43,13 @@ struct RegistrationView: View {
                     .foregroundColor(Color.black)
             }.padding(.horizontal, 16.0)
                 .offset(y: 20)
+            Button(action: viewModel.goBack) {
+                Text("Back")
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 36)
+                    .background(Color.clear)
+                    .foregroundColor(Color.yellow)
+            }.padding(.horizontal, 16.0)
+                .offset(y: 20)
         }.background(Image(uiImage: R.image.login_background()!))
     }
 
@@ -50,6 +57,7 @@ struct RegistrationView: View {
 
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
-        RegistrationView()
+//        RegistrationView()
+        EmptyView()
     }
 }

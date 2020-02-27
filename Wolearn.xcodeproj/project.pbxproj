@@ -15,6 +15,7 @@
 		D33ACB9C2406AEE50040DAD1 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33ACB9B2406AEE50040DAD1 /* CategoriesViewModel.swift */; };
 		D33ACB9E2406AF010040DAD1 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33ACB9D2406AF010040DAD1 /* DateFormatter.swift */; };
 		D33ACBA02406B1350040DAD1 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33ACB9F2406B1350040DAD1 /* SettingsViewModel.swift */; };
+		D33ACBA92407C4530040DAD1 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33ACBA82407C4530040DAD1 /* RouterView.swift */; };
 		D34FA3932403C8D900299919 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA3922403C8D800299919 /* R.generated.swift */; };
 		D34FA3982403D9EE00299919 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA3972403D9EE00299919 /* RegistrationView.swift */; };
 		D34FA39B2403DEBF00299919 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA39A2403DEBF00299919 /* TabBarView.swift */; };
@@ -42,6 +43,9 @@
 		D34FA3DB2405B84B00299919 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA3DA2405B84B00299919 /* Word.swift */; };
 		D34FA3DD2405B90500299919 /* MemorizeWordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA3DC2405B90500299919 /* MemorizeWordRequest.swift */; };
 		D34FA3DF2405B96E00299919 /* MemorizedWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA3DE2405B96E00299919 /* MemorizedWord.swift */; };
+		D34FA3E12406633400299919 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA3E02406633400299919 /* AppCoordinator.swift */; };
+		D392E6722407D930006CE3AA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392E6712407D930006CE3AA /* Data.swift */; };
+		D392E6742407D941006CE3AA /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392E6732407D941006CE3AA /* Encodable.swift */; };
 		D39A777924069E230031F034 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A777824069E230031F034 /* Empty.swift */; };
 		D39A777B2406A06C0031F034 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A777A2406A06C0031F034 /* ProfileViewModel.swift */; };
 		D39A777D2406A1460031F034 /* HistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A777C2406A1460031F034 /* HistoryRow.swift */; };
@@ -84,6 +88,7 @@
 		D33ACB9B2406AEE50040DAD1 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		D33ACB9D2406AF010040DAD1 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		D33ACB9F2406B1350040DAD1 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		D33ACBA82407C4530040DAD1 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		D34FA3922403C8D800299919 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		D34FA3972403D9EE00299919 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		D34FA39A2403DEBF00299919 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -111,6 +116,9 @@
 		D34FA3DA2405B84B00299919 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		D34FA3DC2405B90500299919 /* MemorizeWordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeWordRequest.swift; sourceTree = "<group>"; };
 		D34FA3DE2405B96E00299919 /* MemorizedWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizedWord.swift; sourceTree = "<group>"; };
+		D34FA3E02406633400299919 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D392E6712407D930006CE3AA /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		D392E6732407D941006CE3AA /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		D39A777824069E230031F034 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		D39A777A2406A06C0031F034 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D39A777C2406A1460031F034 /* HistoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRow.swift; sourceTree = "<group>"; };
@@ -178,7 +186,8 @@
 		D331FA212406806200D362BE /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				D331FA222406806B00D362BE /* LoadingView.swift */,
+				D33ACBAB2407C4A00040DAD1 /* Routing */,
+				D33ACBAA2407C4960040DAD1 /* Views */,
 				D331FA242406878E00D362BE /* NetworkViewModel.swift */,
 			);
 			path = Common;
@@ -198,6 +207,23 @@
 				16EE8D16E4515A16C9BF2EA4 /* Pods_Wolearn.framework */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		D33ACBAA2407C4960040DAD1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D331FA222406806B00D362BE /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D33ACBAB2407C4A00040DAD1 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				D33ACBA82407C4530040DAD1 /* RouterView.swift */,
+				D34FA3E02406633400299919 /* AppCoordinator.swift */,
+			);
+			path = Routing;
 			sourceTree = "<group>";
 		};
 		D34FA38E2403C77400299919 /* UI */ = {
@@ -330,6 +356,8 @@
 			children = (
 				D39A777F2406A1920031F034 /* Date.swift */,
 				D33ACB9D2406AF010040DAD1 /* DateFormatter.swift */,
+				D392E6712407D930006CE3AA /* Data.swift */,
+				D392E6732407D941006CE3AA /* Encodable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -594,7 +622,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -625,6 +653,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34FA3E12406633400299919 /* AppCoordinator.swift in Sources */,
 				D34FA39B2403DEBF00299919 /* TabBarView.swift in Sources */,
 				D34FA3DB2405B84B00299919 /* Word.swift in Sources */,
 				D34FA3CA2405B10500299919 /* HistoryRequest.swift in Sources */,
@@ -640,12 +669,14 @@
 				D331FA252406878E00D362BE /* NetworkViewModel.swift in Sources */,
 				D34FA3D42405B76700299919 /* DeleteUserRequest.swift in Sources */,
 				D34FA3DD2405B90500299919 /* MemorizeWordRequest.swift in Sources */,
+				D392E6722407D930006CE3AA /* Data.swift in Sources */,
 				D34FA3A12403FAFA00299919 /* ProfileInfoPreview.swift in Sources */,
 				D34FA3A42404044300299919 /* SettingsView.swift in Sources */,
 				D3A2E22023FC48F900CC27D0 /* SceneDelegate.swift in Sources */,
 				D33ACB9A2406AECA0040DAD1 /* CategoryRow.swift in Sources */,
 				D34FA3DF2405B96E00299919 /* MemorizedWord.swift in Sources */,
 				D3A2E22223FC48F900CC27D0 /* LoginView.swift in Sources */,
+				D392E6742407D941006CE3AA /* Encodable.swift in Sources */,
 				D33ACB9C2406AEE50040DAD1 /* CategoriesViewModel.swift in Sources */,
 				D33ACB972406A45B0040DAD1 /* AppState.swift in Sources */,
 				D39A777D2406A1460031F034 /* HistoryRow.swift in Sources */,
@@ -655,6 +686,7 @@
 				D34FA3C82405B0D400299919 /* HistoryItem.swift in Sources */,
 				D33ACB9E2406AF010040DAD1 /* DateFormatter.swift in Sources */,
 				D34FA3D72405B7BA00299919 /* ResetStatisticsRequest.swift in Sources */,
+				D33ACBA92407C4530040DAD1 /* RouterView.swift in Sources */,
 				D34FA3A7240414E600299919 /* CategoriesView.swift in Sources */,
 				D34FA3B924059C8800299919 /* ServiceError.swift in Sources */,
 				D34FA3982403D9EE00299919 /* RegistrationView.swift in Sources */,
