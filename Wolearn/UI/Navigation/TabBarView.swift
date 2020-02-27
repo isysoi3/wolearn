@@ -18,41 +18,26 @@ struct TabBarView: View {
         UITabBar.appearance().tintColor = .blue
         UITabBar.appearance().layer.borderWidth = 0.5
         UITabBar.appearance().layer.borderColor = UIColor.black.cgColor
-        UINavigationBar.appearance().backgroundColor = UIColor.purple
-        UINavigationBar.appearance().barTintColor = .clear
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
     }
 
     var body: some View {
         TabView {
-            NavigationView {
-                ProfileView()
-                    .navigationBarItems(leading: Text("Wolearn").font(.title).foregroundColor(.white))
-                    .navigationBarTitle("", displayMode: .inline)
-                    .navigationBarHidden(false)
-            }.tabItem {
-                Image(uiImage: R.image.profile_icon()!)
-//                Text("Profile")
+            HeaderView(title: "Wolearn", content: ProfileView())
+                .tabItem {
+                    Image(uiImage: R.image.profile_icon()!)
+                    //                Text("Profile")
             }
-            NavigationView {
-                CategoriesView(viewModel: CategoriesViewModel(coordinator: coordinator))
-                    .navigationBarItems(leading: Text("Wolearn").font(.title).foregroundColor(.white))
-                    .navigationBarTitle("", displayMode: .inline)
-                    .navigationBarHidden(false)
-            }.tabItem {
-                Image(uiImage: R.image.learning_icon()!)
-//                Text("Learning")
+            HeaderView(title: "Wolearn", content: CategoriesView(viewModel: CategoriesViewModel(coordinator: coordinator)))
+                .tabItem {
+                    Image(uiImage: R.image.learning_icon()!)
+                    //                Text("Learning")
             }
-            NavigationView {
-                SettingsView(viewModel: SettingsViewModel(coordinator: coordinator))
-                    .navigationBarItems(leading: Text("Wolearn").font(.title).foregroundColor(.white))
-                    .navigationBarTitle("", displayMode: .inline)
-                    .navigationBarHidden(false)
-            }.tabItem {
-                Image(uiImage: R.image.settings_icon()!)
-//                Text("Settings")
+            HeaderView(title: "Wolearn", content: SettingsView(viewModel: SettingsViewModel(coordinator: coordinator)))
+                .tabItem {
+                    Image(uiImage: R.image.settings_icon()!)
+                    //                Text("Settings")
             }
-        }
+        }.edgesIgnoringSafeArea(.top)
     }
 
 }
