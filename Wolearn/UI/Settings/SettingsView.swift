@@ -23,7 +23,8 @@ struct SettingsView: View {
             ViewStyles.primaryButton(text: "Reset statistics", action: viewModel.resetStatistics)
             ViewStyles.primaryButton(text: "Logout", action: viewModel.logout)
         }
-        .padding([.bottom, .horizontal], 16)
+        .padding(.bottom, 16)
+        .padding(.horizontal, 32)
         .alert(isPresented: $viewModel.isError, content: {
             Alert(title: Text("Error"),
                   message: Text(viewModel.errorMessage ?? ""),
