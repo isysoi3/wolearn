@@ -11,6 +11,7 @@ import SwiftUI
 struct CategoriesView: View {
 
     @ObservedObject var viewModel: CategoriesViewModel
+    private let cache = TemporaryImageCache()
 
     var body: some View {
         LoadingView(isShowing: $viewModel.isLoading, content: buildContent)
@@ -20,7 +21,7 @@ struct CategoriesView: View {
         VStack(alignment: .center) {
             //            TextField("Search", text: $viewModel.searchText)
             //                .textFieldStyle(RoundedBorderTextFieldStyle())
-            List(viewModel.categories, rowContent: CategoryRow.init)
+            List(viewModel.categories) { CategoryRow(content: $0, cache: self.cache)}
                 .onAppear { UITableView.appearance().separatorStyle = .none }
                 .onDisappear { UITableView.appearance().separatorStyle = .singleLine }
             ViewStyles.primaryButton(text: "Start learning new words", action: viewModel.startLearning)

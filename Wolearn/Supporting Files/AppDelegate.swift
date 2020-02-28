@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             log.debug("---------RELEASE BUILD---------")
         }
+        URLCache.shared.removeAllCachedResponses()
         return true
     }
 
