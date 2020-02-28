@@ -88,6 +88,8 @@ struct AsyncImage<Placeholder: View>: View {
         loader = ImageLoader(url: url, cache: cache)
         self.placeholder = placeholder
         self.configuration = configuration
+
+        loader.load()
     }
 
     var body: some View {
