@@ -28,7 +28,7 @@ struct CategoriesView: View {
                 .offset(y: 10)
                 .padding(.bottom, 10)
                 .padding(.horizontal, 16)
-            ViewStyles.primaryButton(text: "Repeat words", action: viewModel.startLearning)
+            ViewStyles.primaryButton(text: "Repeat words", action: viewModel.startRepeat)
                 .offset(y: 20)
                 .padding(.bottom, 20)
                 .padding(.horizontal, 16)

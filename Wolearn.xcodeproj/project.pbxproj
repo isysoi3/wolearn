@@ -17,6 +17,8 @@
 		D33ACBA02406B1350040DAD1 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33ACB9F2406B1350040DAD1 /* SettingsViewModel.swift */; };
 		D33ACBA92407C4530040DAD1 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33ACBA82407C4530040DAD1 /* RouterView.swift */; };
 		D34F596B24090A4B00E71183 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34F596A24090A4B00E71183 /* AsyncImage.swift */; };
+		D34F596F2409328700E71183 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34F596E2409328700E71183 /* AudioRecorder.swift */; };
+		D34F59712409333100E71183 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34F59702409333100E71183 /* AudioPlayer.swift */; };
 		D34FA3932403C8D900299919 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA3922403C8D800299919 /* R.generated.swift */; };
 		D34FA3982403D9EE00299919 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA3972403D9EE00299919 /* RegistrationView.swift */; };
 		D34FA39B2403DEBF00299919 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA39A2403DEBF00299919 /* TabBarView.swift */; };
@@ -96,6 +98,8 @@
 		D33ACB9F2406B1350040DAD1 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		D33ACBA82407C4530040DAD1 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		D34F596A24090A4B00E71183 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		D34F596E2409328700E71183 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		D34F59702409333100E71183 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		D34FA3922403C8D800299919 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		D34FA3972403D9EE00299919 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		D34FA39A2403DEBF00299919 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -239,6 +243,15 @@
 				D34FA3E02406633400299919 /* AppCoordinator.swift */,
 			);
 			path = Routing;
+			sourceTree = "<group>";
+		};
+		D34F596D2409326F00E71183 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D34F596E2409328700E71183 /* AudioRecorder.swift */,
+				D34F59702409333100E71183 /* AudioPlayer.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		D34FA38E2403C77400299919 /* UI */ = {
@@ -437,6 +450,7 @@
 				D34FA3A8240549E900299919 /* Network */,
 				D34FA38E2403C77400299919 /* UI */,
 				D34FA3BE24059EC600299919 /* Extensions */,
+				D34F596D2409326F00E71183 /* Utils */,
 				D34FA3AA24055E5C00299919 /* Supporting Files */,
 				D34FA3902403C79D00299919 /* Resources */,
 				D3A2E22523FC48FA00CC27D0 /* Preview Content */,
@@ -679,6 +693,7 @@
 				D34FA3C62405AE6D00299919 /* Category.swift in Sources */,
 				D3A2E21E23FC48F900CC27D0 /* AppDelegate.swift in Sources */,
 				D34FA3C42405AE4F00299919 /* GetCategoriesRequest.swift in Sources */,
+				D34F59712409333100E71183 /* AudioPlayer.swift in Sources */,
 				D34FA3AC24056AA900299919 /* LoginViewModel.swift in Sources */,
 				D34FA3D92405B80600299919 /* LearningRequest.swift in Sources */,
 				D331FA252406878E00D362BE /* NetworkViewModel.swift in Sources */,
@@ -695,6 +710,7 @@
 				D392E67824082381006CE3AA /* HorizontalLine.swift in Sources */,
 				D3A2E22223FC48F900CC27D0 /* LoginView.swift in Sources */,
 				D392E6742407D941006CE3AA /* Encodable.swift in Sources */,
+				D34F596F2409328700E71183 /* AudioRecorder.swift in Sources */,
 				D33ACB9C2406AEE50040DAD1 /* CategoriesViewModel.swift in Sources */,
 				D33ACB972406A45B0040DAD1 /* AppState.swift in Sources */,
 				D39A777D2406A1460031F034 /* HistoryRow.swift in Sources */,

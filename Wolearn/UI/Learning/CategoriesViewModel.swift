@@ -7,11 +7,15 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class CategoriesViewModel: NetworkViewModel {
 
     @Published var searchText = String()
     @Published var categories: [Category] = []
+
+    @ObservedObject var recorder: AudioRecorder = AudioRecorder()
+    @ObservedObject var player: AudioPlayer = AudioPlayer()
 
     private let coordinator: AppCoordinator
 
@@ -39,10 +43,20 @@ final class CategoriesViewModel: NetworkViewModel {
     }
 
     func startRepeat() {
-        let token = AppState.shared.token!
-        let request = LearningRequest(token: token)
-        doRequest(request) { [weak self] words in
-            self?.coordinator.startLearning(words: words)
+//        let token = AppState.shared.token!
+//        let request = LearningRequest(token: token)
+//        doRequest(request) { [weak self] words in
+//            self?.coordinator.startLearning(words: words)
+//        }
+        if recorder.recording {
+            let url = recorder.stopRecording()
+            print(url)
+            if url != nil {
+                player.startPlayback(audio: url!)
+            }
+
+        } else {
+            recorder.startRecording()
         }
     }
 
