@@ -14,9 +14,6 @@ final class CategoriesViewModel: NetworkViewModel {
     @Published var searchText = String()
     @Published var categories: [Category] = []
 
-    @ObservedObject var recorder: AudioRecorder = AudioRecorder()
-    @ObservedObject var player: AudioPlayer = AudioPlayer()
-
     private let coordinator: AppCoordinator
 
     init(coordinator: AppCoordinator) {
@@ -36,28 +33,31 @@ final class CategoriesViewModel: NetworkViewModel {
 
     func startLearning() {
         let token = AppState.shared.token!
-        let request = LearningRequest(token: token)
+        let request = LearningRequest(type: .new, token: token)
         doRequest(request) { [weak self] words in
             self?.coordinator.startLearning(words: words)
         }
     }
 
     func startRepeat() {
-//        let token = AppState.shared.token!
-//        let request = LearningRequest(token: token)
-//        doRequest(request) { [weak self] words in
-//            self?.coordinator.startLearning(words: words)
-//        }
-        if recorder.recording {
-            let url = recorder.stopRecording()
-            print(url)
-            if url != nil {
-                player.startPlayback(audio: url!)
-            }
-
-        } else {
-            recorder.startRecording()
+        let token = AppState.shared.token!
+        let request = LearningRequest(type: .repeat, token: token)
+        doRequest(request) { [weak self] words in
+            self?.coordinator.startLearning(words: words)
         }
     }
 
 }
+
+//    @ObservedObject var recorder: AudioRecorder = AudioRecorder()
+//    @ObservedObject var player: AudioPlayer = AudioPlayer()
+//    if recorder.recording {
+//    let url = recorder.stopRecording()
+//    print(url)
+//    if url != nil {
+//    player.startPlayback(audio: url!)
+//    }
+//
+//    } else {
+//    recorder.startRecording()
+//    }
