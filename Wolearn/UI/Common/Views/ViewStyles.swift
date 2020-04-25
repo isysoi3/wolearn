@@ -46,4 +46,10 @@ struct ViewStyles {
         }
     }
 
+    static func imageButton(image: UIImage, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Image(uiImage: image)
+        }
+    }
+
 }

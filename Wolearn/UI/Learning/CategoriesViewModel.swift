@@ -48,16 +48,3 @@ final class CategoriesViewModel: NetworkViewModel {
     }
 
 }
-
-//    @ObservedObject var recorder: AudioRecorder = AudioRecorder()
-//    @ObservedObject var player: AudioPlayer = AudioPlayer()
-//    if recorder.recording {
-//    let url = recorder.stopRecording()
-//    print(url)
-//    if url != nil {
-//    player.startPlayback(audio: url!)
-//    }
-//
-//    } else {
-//    recorder.startRecording()
-//    }

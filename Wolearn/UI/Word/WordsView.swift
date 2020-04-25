@@ -17,9 +17,19 @@ struct WordsView: View {
     }
 
     private func buildContent() -> some View {
-        VStack(alignment: .center, spacing: 20) {
-            Spacer()
-            Text(viewModel.currentWord.name)
+        VStack(alignment: .leading, spacing: 16) {
+            HStack(alignment: .center) {
+                Text("\(viewModel.currentWord.name) "
+                    + "[ \(viewModel.currentWord.transcription) ] , "
+                    + "\(viewModel.currentWord.pos)"
+                )
+                ViewStyles.imageButton(
+                    image: R.image.record_audio_icon()!,
+                    action: { self.viewModel.tmp() }
+                )
+            }.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            Spacer().frame(height: 16)
+            Text(viewModel.currentWord.examples.joined(separator: "\n\n"))
             Spacer()
             HStack(alignment: .center, spacing: 24) {
                 ViewStyles.secondaryButton(
@@ -33,7 +43,7 @@ struct WordsView: View {
             }
         }
         .padding(.bottom, 16)
-        .padding(.horizontal, 32)
+        .padding(.horizontal, 16)
         .alert(isPresented: $viewModel.isError, content: {
             Alert(title: Text("Error"),
                   message: Text(viewModel.errorMessage ?? ""),

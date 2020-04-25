@@ -32,6 +32,16 @@ final class WordsViewModel: NetworkViewModel {
     }
 
     func setWordStatus(_ status: WordStatus) {
+//        let token = AppState.shared.token!
+//        let word = MemorizableWord(id: currentWord.id, isMemorized: status == .known)
+//        let request = MemorizeWordRequest(token: token, word: word)
+//        doRequest(request) { [weak self] _ in
+//            self?.updateState()
+//        }
+        updateState()
+    }
+
+    private func updateState() {
         currentIndex += 1
         if currentIndex < words.count {
             currentWord = words[currentIndex]
@@ -39,4 +49,20 @@ final class WordsViewModel: NetworkViewModel {
             coordinator.finishLearning()
         }
     }
+
+    private lazy var recorder: AudioRecorder = AudioRecorder()
+    private lazy var player: AudioPlayer = AudioPlayer()
+
+    func tmp() {
+        if recorder.recording {
+            let url = recorder.stopRecording()
+            print(url)
+            if url != nil {
+                player.startPlayback(audio: url!)
+            }
+        } else {
+            recorder.startRecording()
+        }
+    }
+
 }
