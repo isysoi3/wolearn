@@ -47,6 +47,8 @@
 		D34FA3DD2405B90500299919 /* MemorizeWordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA3DC2405B90500299919 /* MemorizeWordRequest.swift */; };
 		D34FA3DF2405B96E00299919 /* MemorizedWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA3DE2405B96E00299919 /* MemorizedWord.swift */; };
 		D34FA3E12406633400299919 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA3E02406633400299919 /* AppCoordinator.swift */; };
+		D36E19FE244CAC9B00B30368 /* WordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E19FD244CAC9B00B30368 /* WordsView.swift */; };
+		D36E1A01244CADA800B30368 /* WordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E1A00244CADA800B30368 /* WordsViewModel.swift */; };
 		D392E6722407D930006CE3AA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392E6712407D930006CE3AA /* Data.swift */; };
 		D392E6742407D941006CE3AA /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392E6732407D941006CE3AA /* Encodable.swift */; };
 		D392E6762407FF56006CE3AA /* ViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392E6752407FF56006CE3AA /* ViewStyles.swift */; };
@@ -128,6 +130,8 @@
 		D34FA3DC2405B90500299919 /* MemorizeWordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeWordRequest.swift; sourceTree = "<group>"; };
 		D34FA3DE2405B96E00299919 /* MemorizedWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizedWord.swift; sourceTree = "<group>"; };
 		D34FA3E02406633400299919 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D36E19FD244CAC9B00B30368 /* WordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsView.swift; sourceTree = "<group>"; };
+		D36E1A00244CADA800B30368 /* WordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsViewModel.swift; sourceTree = "<group>"; };
 		D392E6712407D930006CE3AA /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D392E6732407D941006CE3AA /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		D392E6752407FF56006CE3AA /* ViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyles.swift; sourceTree = "<group>"; };
@@ -264,6 +268,7 @@
 				D34FA39D2403F1A300299919 /* Profile */,
 				D34FA3A5240414B600299919 /* Learning */,
 				D34FA3A22404042F00299919 /* Settings */,
+				D36E19FC244CAC5C00B30368 /* Word */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -410,6 +415,15 @@
 				D34FA3DC2405B90500299919 /* MemorizeWordRequest.swift */,
 			);
 			path = Learning;
+			sourceTree = "<group>";
+		};
+		D36E19FC244CAC5C00B30368 /* Word */ = {
+			isa = PBXGroup;
+			children = (
+				D36E19FD244CAC9B00B30368 /* WordsView.swift */,
+				D36E1A00244CADA800B30368 /* WordsViewModel.swift */,
+			);
+			path = Word;
 			sourceTree = "<group>";
 		};
 		D39A777E2406A1530031F034 /* Subivews */ = {
@@ -696,6 +710,7 @@
 				D34F59712409333100E71183 /* AudioPlayer.swift in Sources */,
 				D34FA3AC24056AA900299919 /* LoginViewModel.swift in Sources */,
 				D34FA3D92405B80600299919 /* LearningRequest.swift in Sources */,
+				D36E19FE244CAC9B00B30368 /* WordsView.swift in Sources */,
 				D331FA252406878E00D362BE /* NetworkViewModel.swift in Sources */,
 				D34FA3D42405B76700299919 /* DeleteUserRequest.swift in Sources */,
 				D34FA3DD2405B90500299919 /* MemorizeWordRequest.swift in Sources */,
@@ -717,6 +732,7 @@
 				D34F596B24090A4B00E71183 /* AsyncImage.swift in Sources */,
 				D34FA3932403C8D900299919 /* R.generated.swift in Sources */,
 				D34FA39F2403F1B800299919 /* ProfileView.swift in Sources */,
+				D36E1A01244CADA800B30368 /* WordsViewModel.swift in Sources */,
 				D34FA3B02405739000299919 /* RegistrationViewModel.swift in Sources */,
 				D34FA3C82405B0D400299919 /* HistoryItem.swift in Sources */,
 				D33ACB9E2406AF010040DAD1 /* DateFormatter.swift in Sources */,

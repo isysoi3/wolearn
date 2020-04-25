@@ -32,4 +32,18 @@ struct ViewStyles {
         }
     }
 
+    static func secondaryButton(text: String, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Text(text)
+                .multilineTextAlignment(.center)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: buttonHeight)
+                .background(Color.clear)
+                .foregroundColor(Color.yellow)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.yellow, lineWidth: 2)
+                )
+        }
+    }
+
 }
