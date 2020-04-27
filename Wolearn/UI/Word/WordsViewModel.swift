@@ -20,6 +20,14 @@ final class WordsViewModel: NetworkViewModel {
     private let coordinator: AppCoordinator
     private let words: [Word]
     private var currentIndex = 0
+    @Published var score: Int? {
+        didSet {
+            objectWillChange.send()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.25) { [weak self] in
+                self?.score = .none
+            }
+        }
+    }
     @Published var currentWord: Word {
         didSet {
             objectWillChange.send()
@@ -72,7 +80,7 @@ final class WordsViewModel: NetworkViewModel {
                 data: GetAudioScoreData(wordId: currentWord.id, audio: data)
             )
             doRequest(service: audioService, request) { [weak self] result in
-                print(result)
+                self?.score = result.score
             }
         }
     }
