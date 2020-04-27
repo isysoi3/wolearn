@@ -15,6 +15,8 @@ final class WordsViewModel: NetworkViewModel {
         case unknown
     }
 
+    private let audioService = AudioService()
+
     private let coordinator: AppCoordinator
     private let words: [Word]
     private var currentIndex = 0
@@ -54,14 +56,24 @@ final class WordsViewModel: NetworkViewModel {
     private lazy var player: AudioPlayer = AudioPlayer()
 
     func tmp() {
-        if recorder.recording {
+        if !recorder.recording {
+            recorder.startRecording()
+        } else {
             let url = recorder.stopRecording()
             print(url)
-            if url != nil {
-                player.startPlayback(audio: url!)
+            guard
+                let urlValue = url,
+                let data = try? Data(contentsOf: urlValue, options: [.mappedIfSafe]) else {
+                    return
             }
-        } else {
-            recorder.startRecording()
+            player.startPlayback(audio: urlValue)
+            let request = GetAudioScoreRequest(
+                token: Token(value: "dsds"),
+                data: GetAudioScoreData(wordId: currentWord.id, audio: data)
+            )
+            doRequest(service: audioService, request) { [weak self] result in
+                print(result)
+            }
         }
     }
 

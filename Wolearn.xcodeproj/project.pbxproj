@@ -49,6 +49,9 @@
 		D34FA3E12406633400299919 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FA3E02406633400299919 /* AppCoordinator.swift */; };
 		D36E19FE244CAC9B00B30368 /* WordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E19FD244CAC9B00B30368 /* WordsView.swift */; };
 		D36E1A01244CADA800B30368 /* WordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E1A00244CADA800B30368 /* WordsViewModel.swift */; };
+		D391145C2454897600E4651A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391145B2454897600E4651A /* Service.swift */; };
+		D391146124548A8100E4651A /* GetAudioScoreRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391146024548A8100E4651A /* GetAudioScoreRequest.swift */; };
+		D3911463245498A300E4651A /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3911462245498A300E4651A /* AudioService.swift */; };
 		D392E6722407D930006CE3AA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392E6712407D930006CE3AA /* Data.swift */; };
 		D392E6742407D941006CE3AA /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392E6732407D941006CE3AA /* Encodable.swift */; };
 		D392E6762407FF56006CE3AA /* ViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D392E6752407FF56006CE3AA /* ViewStyles.swift */; };
@@ -132,6 +135,9 @@
 		D34FA3E02406633400299919 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		D36E19FD244CAC9B00B30368 /* WordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsView.swift; sourceTree = "<group>"; };
 		D36E1A00244CADA800B30368 /* WordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsViewModel.swift; sourceTree = "<group>"; };
+		D391145B2454897600E4651A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		D391146024548A8100E4651A /* GetAudioScoreRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAudioScoreRequest.swift; sourceTree = "<group>"; };
+		D3911462245498A300E4651A /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
 		D392E6712407D930006CE3AA /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D392E6732407D941006CE3AA /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		D392E6752407FF56006CE3AA /* ViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyles.swift; sourceTree = "<group>"; };
@@ -342,8 +348,7 @@
 			children = (
 				D34FA3A9240549F400299919 /* Models */,
 				D34FA3B724059C7D00299919 /* Requests */,
-				D34FA3B824059C8800299919 /* ServiceError.swift */,
-				D34FA3B524058F2C00299919 /* WolearnService.swift */,
+				D391145A2454896500E4651A /* Service */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 				D34FA3D12405B37500299919 /* ChangeСategoriesRequest.swift */,
 				D34FA3D82405B80600299919 /* LearningRequest.swift */,
 				D34FA3DC2405B90500299919 /* MemorizeWordRequest.swift */,
+				D391146024548A8100E4651A /* GetAudioScoreRequest.swift */,
 			);
 			path = Learning;
 			sourceTree = "<group>";
@@ -424,6 +430,17 @@
 				D36E1A00244CADA800B30368 /* WordsViewModel.swift */,
 			);
 			path = Word;
+			sourceTree = "<group>";
+		};
+		D391145A2454896500E4651A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D34FA3B824059C8800299919 /* ServiceError.swift */,
+				D391145B2454897600E4651A /* Service.swift */,
+				D34FA3B524058F2C00299919 /* WolearnService.swift */,
+				D3911462245498A300E4651A /* AudioService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		D39A777E2406A1530031F034 /* Subivews */ = {
@@ -700,7 +717,9 @@
 				D34FA39B2403DEBF00299919 /* TabBarView.swift in Sources */,
 				D34FA3DB2405B84B00299919 /* Word.swift in Sources */,
 				D34FA3CA2405B10500299919 /* HistoryRequest.swift in Sources */,
+				D391146124548A8100E4651A /* GetAudioScoreRequest.swift in Sources */,
 				D34FA3CC2405B19A00299919 /* GetUserRequest.swift in Sources */,
+				D3911463245498A300E4651A /* AudioService.swift in Sources */,
 				D331FA232406806B00D362BE /* LoadingView.swift in Sources */,
 				D34FA3D22405B37500299919 /* ChangeСategoriesRequest.swift in Sources */,
 				D34FA3B624058F2C00299919 /* WolearnService.swift in Sources */,
@@ -748,6 +767,7 @@
 				D34FA3BD24059CC800299919 /* LoginRequest.swift in Sources */,
 				D34FA3CE2405B1C000299919 /* User.swift in Sources */,
 				D39A777924069E230031F034 /* Empty.swift in Sources */,
+				D391145C2454897600E4651A /* Service.swift in Sources */,
 				D39A777B2406A06C0031F034 /* ProfileViewModel.swift in Sources */,
 				D33ACBA02406B1350040DAD1 /* SettingsViewModel.swift in Sources */,
 			);
