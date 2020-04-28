@@ -15,11 +15,18 @@ final class WordsViewModel: NetworkViewModel {
         case unknown
     }
 
+    enum WordLearningState {
+        case hidden
+        case quiz
+        case examples
+    }
+
     private let audioService = AudioService()
 
     private let coordinator: AppCoordinator
     private let words: [Word]
     private var currentIndex = 0
+
     @Published var score: Int? {
         didSet {
             objectWillChange.send()
@@ -29,6 +36,15 @@ final class WordsViewModel: NetworkViewModel {
         }
     }
     @Published var currentWord: Word {
+        willSet {
+            learningState = .hidden
+            score = .none
+        }
+        didSet {
+            objectWillChange.send()
+        }
+    }
+    @Published var learningState: WordLearningState = .hidden {
         didSet {
             objectWillChange.send()
         }
@@ -53,12 +69,19 @@ final class WordsViewModel: NetworkViewModel {
 
     private func updateState() {
         currentIndex += 1
-        score = .none
         if currentIndex < words.count {
             currentWord = words[currentIndex]
         } else {
             coordinator.finishLearning()
         }
+    }
+
+    func showExamples() {
+        learningState = .examples
+    }
+
+    func showQuiz() {
+        learningState = .quiz
     }
 
     private lazy var recorder: AudioRecorder = AudioRecorder()

@@ -52,4 +52,17 @@ struct ViewStyles {
         }
     }
 
+    static func imageButtonWithText(
+        image: UIImage,
+        text: String,
+        action: @escaping () -> Void
+    ) -> some View {
+        Button(action: action) {
+            VStack(alignment: .center, spacing: 5) {
+                Image(uiImage: image)
+                Text(text)
+            }
+        }
+    }
+
 }
