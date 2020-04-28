@@ -1,22 +1,16 @@
 //
-//  APIService.swift
+//  AudioService.swift
 //  Wolearn
 //
-//  Created by Ilya Sysoi on 2/25/20.
+//  Created by Ilya Sysoi on 4/25/20.
 //  Copyright © 2020 Ilya Sysoi. All rights reserved.
 //
 
 import Foundation
 import Combine
 
-protocol Service {
-    func send<Request>(_ request: Request, _ decoder: JSONDecoder) -> AnyPublisher<Request.Response, ServiceError>
-        where Request: RequestType
-}
+final class AudioService: Service {
 
-final class WolearnService: Service {
-
-    private let baseURL = URL(string: "http://wolearn-api.herokuapp.com/api/v1/")!
     private let session: URLSession
 
     init(session: URLSession = .shared) {
@@ -27,17 +21,13 @@ final class WolearnService: Service {
         _ request: Request,
         _ decoder: JSONDecoder = JSONDecoder()
     ) -> AnyPublisher<Request.Response, ServiceError> where Request: RequestType {
-
-        let pathURL = baseURL.appendingPathComponent(request.path)
+        let boundary = "--210454555871015500921035"
+        let pathURL = request.url.appendingPathComponent(request.path)
         var urlComponents = URLComponents(url: pathURL, resolvingAgainstBaseURL: true)!
-        urlComponents.queryItems = request.queryItems
         var urlRequest = URLRequest(url: urlComponents.url!)
         urlRequest.httpMethod = request.method.value
         urlRequest.httpBody = request.body
-        urlRequest.allHTTPHeaderFields = request.header
-        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        decoder.dateDecodingStrategy = .formatted(DateFormatter.wolearnServer)
+        urlRequest.addValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
 
         log.debug("\(request.identifier)Request: \(urlRequest)\n")
 

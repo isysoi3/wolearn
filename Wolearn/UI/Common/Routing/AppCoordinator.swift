@@ -16,7 +16,7 @@ class AppCoordinator: ObservableObject {
         case login
         case registration
         case authorized
-        case learning
+        case learning([Word])
     }
 
     let objectWillChange = PassthroughSubject<AppCoordinator, Never>()
@@ -52,8 +52,12 @@ class AppCoordinator: ObservableObject {
     }
 
     func startLearning(words: [Word]) {
-//        state = .learning
+        state = .learning(words)
         print(words)
+    }
+
+    func finishLearning() {
+        state = .authorized
     }
 
 }

@@ -17,7 +17,7 @@ class NetworkViewModel: ObservableObject {
 
     private var disposables = Set<AnyCancellable>()
 
-    private let service = WolearnService()
+    let wolearnService = WolearnService()
 
     init() {
     }
@@ -26,10 +26,13 @@ class NetworkViewModel: ObservableObject {
         disposables.forEach { $0.cancel() }
     }
 
-    func doRequest<Request>(_ request: Request, completionBlock: @escaping (Request.Response) -> Void)
-        where Request: RequestType {
+    func doRequest<Request>(
+        service: Service? = .none,
+        _ request: Request,
+        completionBlock: @escaping (Request.Response) -> Void
+    ) where Request: RequestType {
         isLoading = true
-        service.send(request)
+        (service ?? wolearnService).send(request, JSONDecoder())
             .sink(receiveCompletion: errorHandler,
                   receiveValue: { [weak self] value in
                     self?.isLoading = false

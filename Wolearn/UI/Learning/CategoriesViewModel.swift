@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class CategoriesViewModel: NetworkViewModel {
 
@@ -32,7 +33,7 @@ final class CategoriesViewModel: NetworkViewModel {
 
     func startLearning() {
         let token = AppState.shared.token!
-        let request = LearningRequest(token: token)
+        let request = LearningRequest(type: .new, token: token)
         doRequest(request) { [weak self] words in
             self?.coordinator.startLearning(words: words)
         }
@@ -40,7 +41,7 @@ final class CategoriesViewModel: NetworkViewModel {
 
     func startRepeat() {
         let token = AppState.shared.token!
-        let request = LearningRequest(token: token)
+        let request = LearningRequest(type: .repeat, token: token)
         doRequest(request) { [weak self] words in
             self?.coordinator.startLearning(words: words)
         }
