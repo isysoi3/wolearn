@@ -53,6 +53,7 @@ final class WordsViewModel: NetworkViewModel {
 
     private func updateState() {
         currentIndex += 1
+        score = .none
         if currentIndex < words.count {
             currentWord = words[currentIndex]
         } else {
@@ -63,7 +64,7 @@ final class WordsViewModel: NetworkViewModel {
     private lazy var recorder: AudioRecorder = AudioRecorder()
     private lazy var player: AudioPlayer = AudioPlayer()
 
-    func tmp() {
+    func recordWord() {
         if !recorder.recording {
             recorder.startRecording()
         } else {

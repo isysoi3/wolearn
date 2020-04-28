@@ -27,7 +27,7 @@ struct WordsView: View {
                     )
                     ViewStyles.imageButton(
                         image: R.image.record_audio_icon()!,
-                        action: { self.viewModel.tmp() }
+                        action: { self.viewModel.recordWord() }
                     )
                 }.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 Spacer().frame(height: 16)
@@ -57,39 +57,25 @@ struct WordsView: View {
     }
 
     private func addStars() -> some View {
-        if viewModel.score != nil {
-            return HStack(alignment: .center, spacing: 16) {
-                if viewModel.score != nil {
-                    if viewModel.score == 1 {
-                        Star(corners: 5, smoothness: 0.45)
-                            .fill(Color.yellow)
-                            .frame(width: 50, height: 50)
-                    }
-                    if viewModel.score == 2 {
-                        Star(corners: 5, smoothness: 0.45)
-                            .fill(Color.yellow)
-                            .frame(width: 50, height: 50)
-                        Star(corners: 5, smoothness: 0.45)
-                            .fill(Color.yellow)
-                            .frame(width: 50, height: 50)
-                    }
-                    if viewModel.score == 3 {
-                        Star(corners: 5, smoothness: 0.45)
-                            .fill(Color.yellow)
-                            .frame(width: 50, height: 50)
-                        Star(corners: 5, smoothness: 0.45)
-                            .fill(Color.yellow)
-                            .frame(width: 50, height: 50)
-                        Star(corners: 5, smoothness: 0.45)
-                            .fill(Color.yellow)
-                            .frame(width: 50, height: 50)
-                    }
+        Group {
+            if viewModel.score != nil {
+                HStack(alignment: .center, spacing: 16) {
+                    Star(corners: 5, smoothness: 0.45)
+                        .fill(viewModel.score! >=  1 ? Color.yellow : Color.white)
+                        .frame(width: 50, height: 50)
+                    Star(corners: 5, smoothness: 0.45)
+                        .fill(viewModel.score! >= 2 ? Color.yellow : Color.white)
+                        .frame(width: 50, height: 50)
+                    Star(corners: 5, smoothness: 0.45)
+                        .fill(viewModel.score! >= 3 ? Color.yellow : Color.white)
+                        .frame(width: 50, height: 50)
                 }
+                .frame(width: 200, height: 80)
+                .background(Color.gray)
+                .cornerRadius(16, antialiased: true)
+            } else {
+                EmptyView()
             }
-            .frame(width: 200, height: 80)
-            .background(Color.gray)
-        } else {
-            return HStack(alignment: .center, content: { EmptyView() })
         }
     }
 
